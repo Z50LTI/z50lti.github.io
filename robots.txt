@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /cookies.html
-Disallow: /privacypolicy.html
-Disallow: /termsandconditions.html
-
-Sitemap: https://www.fantailprojects.com/sitemap.xml
