@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /css/
-Disallow: /fonts/
 Disallow: /cookies.html
 Disallow: /privacypolicy.html
 Disallow: /termsandconditions.html
