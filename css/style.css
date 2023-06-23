@@ -337,6 +337,15 @@ code{
     width: 100%;
 }
 
+/* Safari only */
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+        .code {
+            height: auto;
+        }
+    }
+}
+
 
 
 /* Sets to 2 colums at 1300px width */
