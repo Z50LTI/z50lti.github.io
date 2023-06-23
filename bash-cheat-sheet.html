@@ -17,7 +17,7 @@
 
   <div class="grid">
     <section class="borderless">
-      <img src="IMAGES/gears.png" alt="">
+      <img src="images/gears.png" alt="">
       <a class="btn-round"
         href="https://drive.google.com/drive/folders/19a3S-zVab2ndUiA0g9mFcHNIrapgP-MH?usp=share_link" rel="noopener"
         target="_blank">Download QAToolBox for FREE
@@ -31,13 +31,13 @@
     </section>
 
     <section class="borderless">
-      <img src="IMAGES/bits-bytes.jpg" alt="">
+      <img src="images/bits-bytes.jpg" alt="">
       <a class="btn-round" href="https://www.facebook.com/groups/qatoolbox" rel="noopener" target="_blank">QAToolBox
         Facebook group</a>
     </section>
 
     <section class="borderless">
-      <img src="IMAGES/program-stack.png" alt="">
+      <img src="images/program-stack.png" alt="">
       <a class="btn-round" href="https://www.linkedin.com/company/qatoolbox" rel="noopener" target="_blank">QAToolBox
         LinkedIn page</a>
     </section>
@@ -185,14 +185,14 @@ echo 'Hi $name'  #=&gt; Hi $name
 </div>  
 
 <div class="code">
-  <br>
+  <div class="empty"></div>
 <pre><code class="language-bash">length=2
     echo "${name:0:length}"  #=&gt; "Jo"
     </code></pre>
 </div>
 
 <div class="code">
-  <br>
+  <div class="empty hide-empty"></div>
 <pre><code class="language-bash">str="/path/to/foo.cpp"
     echo "${str%.cpp}"    # /path/to/foo
     echo "${str%.cpp}.o"  # /path/to/foo.o
@@ -293,7 +293,7 @@ echo 'Hi $name'  #=&gt; Hi $name
   </div>
 
   <div class="code">
-    <br>
+    <div class="empty"></div>
 <pre><code class="language-bash">: '
 This is a
 multi line
@@ -447,7 +447,7 @@ comment
 </div>
 
 <div class="code">
-  <br>
+  <div class="empty"></div>
 <pre><code class="language-bash"># Same as above (alternate syntax)
     function myfunc() {
         echo "hello $1"
@@ -456,7 +456,7 @@ comment
 </div>
 
 <div class="code">
-  <br>
+  <div class="empty"></div>
 <pre><code class="language-bash">myfunc "John"
     </code></pre>
 </div>
@@ -471,7 +471,7 @@ comment
 </div>
 
 <div class="code">
-  <br>
+  <div class="empty"></div>
 <pre><code class="language-bash">result=$(myfunc)
     </code></pre>
 </div>
@@ -746,7 +746,7 @@ comment
 
 </div>
 <div class="code">
-  <br>
+  <div class="empty"></div>
 <pre><code class="language-bash">Fruits[0]="Apple"
     Fruits[1]="Banana"
     Fruits[2]="Orange"
@@ -802,7 +802,7 @@ comment
     </code></pre>
 
 </div>  
-<div class="code"> <br>
+<div class="code"> <div class="empty"></div>
 <pre><code class="language-bash">sounds[dog]="bark"
     sounds[cow]="moo"
     sounds[bird]="tweet"
@@ -837,7 +837,7 @@ comment
 </div>
 
 <div class="code">
-  <br>
+  <div class="empty"></div>
 <h5 id="iterate-over-keys">Iterate over keys</h5>
 <pre><code class="language-bash">for key in "${!sounds[@]}"; do
       echo "$key"
@@ -1001,13 +1001,13 @@ comment
     </code></pre>
 </div>  
 <div class="code">
-  <br>
+  <div class="empty"></div>
 <pre><code class="language-bash">$(($RANDOM%200))  # Random number 0..199
     </code></pre>
 </div>
 
 <div class="code">
-  <br>
+  <div class="empty"></div>
 <pre><code class="language-bash">declare -i count  # Declare as type integer 
     count+=1          # Increment
     </code></pre>
@@ -1037,7 +1037,7 @@ comment
 </div>  
 
 <div class="code">
-  <br>
+  <div class="empty"></div>
 <pre><code class="language-bash">python hello.py &lt; foo.txt      # feed foo.txt to stdin for python
     diff &lt;(ls -r) &lt;(ls)            # Compare two stdout without files
     </code></pre>
@@ -1287,7 +1287,7 @@ comment
 
   <footer>
     <div class="contact">
-      <h2>Enter your email address to<br>
+      <h2>Enter your email address to <br>
         Receive a FREE resource and be notified of updates</h2>
       <form action="https://formsubmit.co/36420157d850fa8f8b497cad8ae63818" method="POST">
         <input type="email" name="email" placeholder="E-mail" required>
