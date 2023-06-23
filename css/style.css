@@ -317,13 +317,8 @@ pre code{
     width: 100%;
     height: 100%;
     overflow: auto;
-    
-
 }
 
-.code>* {
-    min-height: fit-content;
-}
 
 pre{
     height: 100%;
@@ -341,7 +336,7 @@ code{
 @media not all and (min-resolution:.001dpcm) { 
     @supports (-webkit-appearance:none) {
         .code {
-            height: -webkit-fit-content;
+            height: 100;
         }
     }
 }
