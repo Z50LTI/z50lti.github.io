@@ -315,17 +315,20 @@ pre code{
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: -webkit-fill-available;
+    height: 100%;
     overflow: auto;
     
 
 }
 
+.code>* {
+    min-height: fit-content;
+}
+
 pre{
-    height: auto;
+    height: 100%;
     width: 100%;
     overflow: auto;
-    display: table;
 
 
 }
