@@ -815,6 +815,14 @@ position: fixed;
         
                 }
 
+                                 .page-text .page-title {
+                                     top: 146px;
+                                 }
+                
+                                 .page-title {
+                                    top: 100px;
+                                 }
+
                
 
 
