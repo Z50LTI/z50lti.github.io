@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botswana Family Safari</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+
+<body>
+    <div class="landing">
+        <header>
+            <div class="x" onclick="toggle()">
+                <img id="menu-button" src="images/icons/menu.svg" alt="">
+            </div>
+
+            <img id="logo" class="x" src="images/image.png" alt="">
+
+            <div class="icons x">
+                <div onclick="share()" class="tooltip share">
+                    <span class="tooltiptext">Copy Link</span>
+                </div>
+
+                <div class="tooltip pdf">
+                    <span class="tooltiptext">Download as PDF</span>
+                </div>
+
+                <div onclick="openContact()" class="tooltip phone">
+                    <span class="tooltiptext">Contact Travel Consultant</span>
+                </div>
+
+            </div>
+        </header>
+
+
+        <div class="menu" id="menu">
+            <h2>TABLE OF CONTENTS</h2>
+
+            <nav class="menu-items">
+                <a class="active" href="#coverpage">COVER PAGE</a>
+                <a href="#safarioverview">SAFARI OVERVIEW</a>
+                <a href="#safarimap">SAFARI MAP</a>
+                <a href="#makgadikgadipans">MAKGADIKGADI PANS <br> <i>Day 1 - 4</i></a>
+                <a href="#jackscamp">JACK'S CAMP <br> <i>Day 1 - 4</i></a>
+                <a href="#khwaicommunityarea">KHWAI COMMUNITY AREA <br> <i>Day 4 - 7</i></a>
+                <a href="#khwaileadwood">KHWAI LEADWOOD <br> <i>Day 4 - 7</i></a>
+                <a href="#chobe">CHOBE <br> <i>Day 7 - 10</i></a>
+                <a href="#chobegamelodge">CHOBE GAME LODGE <br> <i>Day 7 - 10</i></a>
+                <a href="#safaricosts">SAFARI COSTS</a>
+                <a href="#aboutmavrossafaris">ABOUT MAVROS SAFARIS</a>
+            </nav>
+
+        </div>
+
+        <div class="menu-mobile" id="menu-mobile">
+
+        
+            <nav class="menu-items-mobile">
+                <a class="mobile-active" href="#coverpage">COVER PAGE</a>
+                <a href="#safarioverview">SAFARI OVERVIEW</a>
+                <a href="#safarimap">SAFARI MAP</a>
+                <a href="#makgadikgadipans">MAKGADIKGADI PANS</a>
+                <a href="#jackscamp">JACK'S CAMP</a>
+                <a href="#khwaicommunityarea">KHWAI COMMUNITY AREA</a>
+                <a href="#khwaileadwood">KHWAI LEADWOOD</a>
+                <a href="#chobe">CHOBE </a>
+                <a href="#chobegamelodge">CHOBE GAME LODGE </a>
+                <a href="#safaricosts">SAFARI COSTS</a>
+                <a href="#aboutmavrossafaris">ABOUT MAVROS SAFARIS</a>
+            </nav>
+        
+        </div>
+
+
+        <div class="overlay-container" id="contact">
+            <div class="overlay">
+                <div class="overlay-title">
+                    <h3>Contact your Travel Consultant</h3>
+                    <img onclick="closeContact()" src="images/icons/close.svg" alt="">
+                </div>
+                <div class="contact-content">
+                    <p>Kelley Austen</p>
+                    <p class="lightgrey">(Mavros Safaris)</p>
+
+                    <div class="contact-grid">
+                        <div class="contact-grid-item">
+                            <img src="images/icons/Email.svg" alt="">
+                            <div>
+                                <p class="lightgrey">Email</p>
+                                <p> <b> kelley@mavrossafaris.com </b></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-grid-item">
+                            <img src="images/icons/Phone2.svg" alt="">
+                            <div>
+                                <p class="lightgrey">Phone Number</p>
+                                <p> <b> +44 20382 46000 </b></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-grid-item">
+                            <img src="images/icons/Whatsapp.svg" alt="">
+                            <div>
+                                <p class="lightgrey">Whatsapp</p>
+                                <p> <b> +263776270499 </b></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-grid-item">
+                            <img src="images/icons/smartphone.svg" alt="">
+                            <div>
+                                <p class="lightgrey">Mobile Number</p>
+                                <p> <b> +263776270499 </b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="overlay-container" id="khwai">
+            <div class="overlay">
+                <div class="overlay-title">
+                    <h3>ABCF Projects In Khwai</h3>
+                    <img onclick="closePreviewKhwai()" src="images/icons/close.svg" alt="">
+                </div>
+
+                <div class="overlay-preview">
+                    <object data="/documents/ABCF Project Flyer Khwai Botswana.pdf" type="application/pdf" width="100%"
+                        height="700px">
+                    </object>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="overlay-container" id="previewTos">
+            <div class="overlay">
+                <div class="overlay-title">
+                    <h3>Standard Terms And Conditions</h3>
+                    <img onclick="closePreviewTos()" src="images/icons/close.svg" alt="">
+                </div>
+
+                <div class="overlay-preview">
+                    <object data="/documents/Mavros Safaris Terms and Conditions 2022.pdf" type="application/pdf"
+                        width="100%" height="700px">
+                    </object>
+                </div>
+
+            </div>
+        </div>
+
+        <a class="arrow arrow-right" id="scroll-button">
+            &#8595;
+        </a>
+
+        
+
+        <!-- Cover Page -->
+
+        <div class="page-image" id="coverpage">
+            <img src="images/family.jpeg"
+                alt="">
+
+            <div class="page-image-overlay">
+                <h1>Family Safari</h1>
+            </div>
+        </div>
+        <div class="page-content" id="coverpage1">
+            <h2>SAFARI IS THE SWAHILI WORD <br> FOR JOURNEY.</h2>
+            <i>Yours starts here.</i>
+            <a href="#safarioverview" class="arrow">
+                &#8595;
+            </a>
+        </div>
+
+
+        <div class="page-image" id="safarioverview">
+            <img src="images/safari.jpeg"
+                alt="">
+            <div class="page-image-overlay">
+                <div>
+                    <i><span class="subheading">-</span> Detailed itinerary</i>
+                    <h1>Safari Overview</h1>
+                </div>
+
+            </div>
+        </div>
+        <div class="page-content text-centered" >
+            <div class="page-title">
+                <h2>Safari Overview</h2>
+                <hr>
+            </div>
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Detailed Itinerary</i>
+                </div>
+                <p><b>Day 1 - 4</b> <br> Shared charter and road transfer <br> Jack's Camp <br> 3 Nights</p>
+                <p><b>Day 4 - 7</b> <br> Shared charter and road transfer <br> Khwai Leadwood <br> 3 Nights</p>
+                <p><b>Day 7 - 10</b> <br> Shared charter and road transfer <br> Chobe Game Lodge <br> 3 Nights</p>
+            </div>
+            
+
+        </div>
+
+
+        <div class="page-image" id="safarimap">
+            <img src="images/man.jpeg"
+                alt="">
+            <div class="page-image-overlay">
+                <div>
+                    <i><span class="subheading">-</span> Detailed itinerary</i>
+                    <h1>SAFARI MAP</h1>
+                </div>
+
+            </div>
+        </div>
+        <div class="page-content text-centered" >
+            <div class="page-title">
+                <h2>Safari Overview</h2>
+                <hr>
+            </div>
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Visualize your journey</i>
+                </div>
+
+               
+
+
+                <div id="map"></div>
+
+                <p><b>Key Dates</b> <br> <b>1)</b> Day 1 - 4: Jack's Camp, Makgadikgadi Pans <br> <b>2)</b> Day 4 - 7:
+                    Khwai Leadwood, Khwai Community Area <br> <b>3)</b> Day 7 - 10: Chobe Game Lodge, Chobe</p>
+
+            </div>
+
+            
+
+        </div>
+
+
+
+        <!-- Safari overview -->
+
+        <div class="page-image" id="makgadikgadipans">
+            <img src="images/image_processing20211013-10-1u45byd.jpeg"
+                alt="">
+            <div class="page-image-overlay">
+                <div>
+                    <i><span class="subheading">-</span> Day 1 - 4</i>
+                    <h1>MAKGADIKGADI PANS</h1>
+                </div>
+
+                <div class="page-image-location">
+                    <img src="images/icons/marker.svg" alt="marker">
+                    <h3>Makgadikgadi Pans, Botswana</h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="page-content" >
+            <div class="page-title">
+                <h2>Makgadikgadi Pans</h2>
+                <hr>
+
+            </div>
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Area Overview</i>
+                </div>
+
+
+                <p>The Makgadikgadi Pans is an area of 12,000 sq km (4,600 sq mi), part of the Kalahari Basin and one of
+                    the largest series
+                    of salt pans in the world; a remnant of what was once one of the biggest inland lakes Africa has
+                    ever had. During years
+                    of good rain, the two largest pans – Sowa in the east and Ntwetwe in the west – flood and attract
+                    zebras, wildebeest and
+                    vast flocks of flamingos. No vegetation grows on the pans but they are fringed with grasslands,
+                    palms and ancient
+                    baobabs, all of which present a visually stunning landscape.</p>
+
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <p>Early explorers like David Livingstone risked their lives exploring this wilderness on oxcarts with
+                    little to
+                    navigate
+                    by, and there are even tales of local San children getting lost in the mirages on the pans. In the
+                    wet season these
+                    areas can have large herds of grazing animals that make their way westwards on migration towards the
+                    Boteti River,
+                    followed by a whole host of predators. Other animals to look for include elephants, brown hyenas,
+                    meerkats and
+                    desert
+                    adapted and nocturnal species.</p>
+            </div>
+
+            
+
+
+
+        </div>
+
+
+        <div class="page-image" id="jackscamp">
+            <img src="images/campsmall.jpeg"
+                alt="">
+            <div class="page-image-overlay">
+                <div>
+                    <i><span class="subheading">-</span> Day 1 - 4</i>
+                    <h1>JACK'S CAMP</h1>
+                </div>
+
+                <div class="page-image-location">
+                    <img src="images/icons/marker.svg" alt="marker">
+                    <h3>Makgadikgadi Pans, Botswana</h3>
+                </div>
+                
+
+            </div>
+        </div>
+        <div class="page-content" >
+            <div class="page-title">
+                <h2>Jack's Camp</h2>
+                <hr>
+
+            </div>
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Property Overview</i>
+                </div>
+
+
+                <p>Jack’s Camp is one of Africa’s most iconic camps, an oasis of style and comfort in the middle of
+                    Botswana’s Kalahari
+                    Desert. A beautiful authentic, 1940’s style tented safari camp that has been completely rebuilt and
+                    reopenedin late
+                    2020, refreshed and reinvigorated, yet still retaining the classic style we all know and love.
+                    Situated in the heart of
+                    the Makgadikgadi Salt Pans, Jack’s Camp is truly like nowhere else on earth.</p>
+
+                <img src="images/jackscamp2.jpeg" alt="">
+
+                <p>The new, larger mess tent will be resplendent with the renowned Natural History Museum, library,
+                    antique pool table and
+                    a well-stocked drinks chest. The camp has one of the most comprehensive collections of ancient
+                    artefacts in Botswana,
+                    collected and curated by the Bousfield family over decades.</p>
+            </div>
+
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Experience & Activities</i>
+                </div>
+
+
+                <p>Spectacular vistas, expert guiding, friendly habituated meerkats, unique desert wildlife, old-world
+                    safari styling and
+                    superb cuisine all come together to create an experience that is completely different to any other.
+                </p>
+
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+
+
+
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Accommodations</i>
+                </div>
+
+                <h3>Guest Tent King Bed</h3>
+
+                <p>Each Guest Tent covers 270 sqm of interior floor space, paying homage to the property’s much loved
+                    1940s campaign style.
+                    The tents, now cooler and more spacious, are adorned with a classic East African safari feel.
+                    Persian and North African
+                    rugs, brass fittings, luxuriant textiles, Natural History mahogany cabinets and an overhead bed
+                    cooling system. Each
+                    ensuite bathroom has an indoor and outdoor shower. The outer deck has a private plunge pool,
+                    overlooking the
+                    Makgadikgadi Pans.</p>
+
+                    <div class="grid-2x">
+                        <img src="images/jackscamp3.jpeg" alt="">
+                        <img src="images/jackscamp4.jpeg" alt="">
+                    </div>
+
+                
+            </div>
+
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Fast Facts</i>
+                </div>
+
+                <div class="page-text-facts">
+                    <img src="images/icons/compass.png" alt="compass">
+                    <div>
+                        <p><b>Highlights</b></p>
+                        <p>Meet the habituated meerkats</p>
+                        <p>Walk with the Zu/’hoasi Bushmen</p>
+                        <p>Search for the elusive brown hyena</p>
+                        <p>Enjoy day and night game drives</p>
+                        <p>Explore via fat bike safaris</p>
+                        <p>Visit the site of Chapman’s Baobab</p>
+                        <p>Experience scenic helicopter flips*</p>
+                        <p>Experience a completely different perspective with a morning or afternoon horseback ride; one
+                            horseback ride is included
+                            in stays of 3 nights or more</p>
+                        <p>*Subject to a surcharge</p>
+                        <p>Dry Season (April – October):</p>
+                        <p>Lie out on the pans at sun set and watch the planetarium show unfold</p>
+                        <p>Quad biking (2 guests per quad bike, weather dependent)</p>
+                        <p>Green Season (November – April):</p>
+                        <p>Witness the zebra and wildebeest migration, the second largest in Africa</p>
+                    </div>
+                
+                    <img src="images/icons/tent.png" alt="tent">
+                    <div>
+                        <p><b>Quick facts</b></p>
+                        <p>Only 8 rooms</p>
+                        <p>Open all year round, some activities are seasonally dependent</p>
+                        <p>Dry season: 16 April – 31 October</p>
+                        <p>Green season: 01 November – 15 April</p>
+                        <p>Children of all ages welcome. (Please refer to our rates for child policies)</p>
+                        <p>The tents have 24 hour electricity (100% solar powered)</p>
+                        <p>Charging facilities are available in the mess tent and in guest tents (please bring an adaptor)
+                        </p>
+                        <p>No Wifi or phone signal in camp</p>
+                        <p>Open vehicles with rooftop seats accommodate a maximum of 7 people</p>
+                        <p>Please consult your doctor for recommended vaccinations</p>
+                        <p>If quad biking, you should bring a good pair of sunglasses or goggles - the sunlight and dust can
+                            be harsh</p>
+                    </div>
+                </div>
+
+            </div>
+
+            
+            
+        </div>
+
+
+
+        <div class="page-image" id="khwaicommunityarea">
+            <img src="images/animal.jpeg"
+                alt="">
+            <div class="page-image-overlay">
+                <div>
+                    <i><span class="subheading">-</span> Day 4 - 7</i>
+                    <h1>KHWAI COMMUNITY AREA</h1>
+                </div>
+
+
+
+                <div class="page-image-location">
+                    <img src="images/icons/marker.svg" alt="marker">
+                    <h3>Khwai Community Area, Botswana</h3>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="page-content" >
+            <div class="page-title">
+                <h2>Khwai Community Area</h2>
+                <hr>
+
+            </div>
+            <div class="page-text">
+                <div class="page-title">
+                    <i>A wildlife extravaganza in the heart of Botswana’s wilderness</i>
+                </div>
+
+                <p class="text-centered"><b>Where legendary rivers blend with the edge of the desert and wildlife
+                        abounds</b></p>
+
+
+                <p>On the outskirts of the beautifully preserved Moremi Game Reserve, is a wildlife-prolific and varied
+                    ecosystem which
+                    provides a patchwork of lagoons, shallow flooded pans, open grass plains and woodland forests. The
+                    Khwai
+                    area is without
+                    a doubt one of the most scenic areas in Botswana. Combine your stay at Khwai Leadwood with a taste
+                    of
+                    culture in the
+                    traditional village of Khwai.</p>
+
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
+
+                <p>The Khwai community, adjacent to the northern region of Moremi Game Reserve, has a population of just
+                    400
+                    people who are
+                    predominately of either BaBukakhwe or River Bushmen decent. They are an inspirational example of a
+                    local
+                    community who
+                    live in peaceful harmony with wildlife.</p>
+
+                <p>The Khwai Concession is a 1800km area which is situated in the northeastern Okavango next to the
+                    Moremi Game
+                    Reserve. It
+                    was formed by the local Khwai villagers and is managed by the Khwai Development Trust. The area used
+                    to be a
+                    hunting
+                    concession but is now actively managed as a conservation area. The villagers took over the area when
+                    they
+                    moved out of
+                    the Moremi region when the Moremi Game Reserve was formed. The local community now runs ecotourism
+                    initiatives, actively
+                    conserve the environment and manage the wildlife in the concession.</p>
+            </div>
+
+        </div>
+
+
+
+        <div class="page-image" id="khwaileadwood">
+            <img src="images/green.jpeg"
+                alt="">
+            <div class="page-image-overlay">
+                <div>
+                    <i><span class="subheading">-</span> Day 4 - 7</i>
+                    <h1>Khwai Leadwood</h1>
+                </div>
+
+                <div class="page-image-location">
+                    <img src="images/icons/marker.svg" alt="marker">
+                    <h3>Khwai Community Area, Botswana</h3>
+                </div>
+                
+
+            </div>
+        </div>
+
+        <div class="page-content" >
+            <div class="page-title">
+                <h2>Khwai Leadwood</h2>
+                <hr>
+
+            </div>
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Property Overview</i>
+                </div>
+
+                <p>Set within the Okavango Delta’s community-run Khwai Concession, this beautiful camp is tucked under
+                    the trees on the
+                    edge of the Khwai River. This river is all that separates the iconic Moremi Game Reserve and the
+                    concession, with
+                    hippos, elephants and even lions crossing over from time to time. Watching these animals manoeuvre
+                    through the water is
+                    an exceptional experience for even the most travelled safari veterans.</p>
+
+
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+
+
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Experience & Activities</i>
+                </div>
+
+                <p>During the day, guests can enjoy game drives, walking safaris and mokoro safaris (water levels
+                    permitting) on the search
+                    for Africa’s big attractions including lion, cheetah, leopard, wild dog, elephant, buffalo, hippo
+                    and giraffe. An
+                    additional virtue of this area is that guests can head off on night drives and get an up-close and
+                    personal experience
+                    with some of Africa’s nocturnal and more elusive animals.</p>
+
+
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <p>Khwai’s biggest drawcard is undoubtedly the plentiful and extraordinary wildlife – you’ll never be
+                    bored here! Adventure
+                    and relaxation are on offer as guests live out their ultimate safari experience – from setting off
+                    on a morning walking
+                    safari to enjoying a gin and tonic overlooking the Khwai River.</p>
+
+            </div>
+
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Accommodations</i>
+                </div>
+
+                <p><b>Luxury Family Tent</b></p>
+
+                <p>This 2-bedroomed luxury family tent is connected by an inter-leading walkway, has an indoor bath and
+                    has a shared deck.</p>
+
+
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
+            </div>
+
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Fast Facts</i>
+                </div>
+
+                <div class="page-text-facts">
+                    <img src="images/icons/compass.png" alt="compass">
+                    <div>
+                        <p><b>Highlights</b></p>
+                        <p>Set within the Okavango Delta’s community-run Khwai Concession bordering Moremi Game Reserve
+                        </p>
+                        <p>Activities include day & night game drives, Mokoro excursions, walking safaris, helicopter
+                            flights, cultural visits</p>
+                        <p>Hippo & elephant crossings at the river</p>
+                        <p>The Ngwana Club for kids</p>
+                    </div>
+
+                    <img src="images/icons/tent.png" alt="tent">
+                    <div>
+                        <p><b>Quick facts</b></p>
+                        <p>6 luxury tents and 1 two-bedroomed luxury family unit</p>
+                        <p>Maximum 16 people</p>
+                        <p>Pool</p>
+                        <p>En suite</p>
+                        <p>Indoor/outdoor showers</p>
+                        <p>Bar</p>
+                        <p>Solar power</p>
+                        <p>Battery charging facilities in rooms</p>
+                        <p>Private deck</p>
+                        <p>Fans in room</p>
+                        <p>Child policy: All ages</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="page-text">
+                <div class="page-title">
+                    <i>ABC Foundation Projects</i>
+                </div>
+
+
+                <p>The African Bush Camps Foundation is a registered non-profit organization that has been in operation
+                    since 2006. The
+                    Foundation’s mission is to partner with communities that are located near our camps to improve
+                    quality of life and
+                    achieve long-term conservation through programs focusing on: Education, Community Empowerment, and
+                    Conservation.</p>
+
+                <p class="text-centered"><b>Khwai Pre-School</b></p>
+
+                <div class="grid-2x">
+                    <img src="images/khwai.jpeg" alt="">
+                    <img src="images/khwai2.jpeg" alt="">
+                </div>
+
+                <div class="page-content-documents">
+                    <p>PDF Documents</p>
+                    <div class="page-content-documents-files">
+                        <a href="documents/ABCF Project Flyer Khwai Botswana.pdf" target="_blank">
+                            <p>ABCF Projects In Khwai</p>
+                        </a>
+                        <div class="icons">
+
+
+                            <a href="/documents/ABCF Project Flyer Khwai Botswana.pdf" class="tooltip download"
+                                download><span class="tooltiptext">Download the single file</span></a>
+                            <div onclick="openPreviewKhwai()" class="tooltip preview"><span class="tooltiptext">See the
+                                    file preview</span></div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <p>Book a visit to our local projects during your stay. The trip includes a visit to the Khwai
+                    Pre-School. Transfer by
+                    vehicle: 30 minute drive time. Duration: 1.5 hours.</p>
+
+                <p>Guests can also volunteer at the nutrition program.</p>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="page-image" id="chobe">
+            <img src="images/elephant.jpeg"
+                alt="">
+            <div class="page-image-overlay">
+                <div>
+                    <i><span class="subheading">-</span> Day 7 - 10</i>
+                    <h1>CHOBE</h1>
+                </div>
+
+                <div class="page-image-location">
+                    <img src="images/icons/marker.svg" alt="marker">
+                    <h3>Chobe, Botswana</h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="page-content" >
+            <div class="page-title">
+                <h2>Chobe National Park</h2>
+                <hr>
+
+            </div>
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Area Overview</i>
+                </div>
+
+
+                <p>Chobe National Park is located in northern Botswana in easy driving distance to Kasane and Victoria
+                    Falls. Chobe is
+                    Botswana’s first designated national park and, at over 11,700 km2 (4,500 mi2), is one of the
+                    largest. The greater Chobe
+                    area consists of the Chobe River, Savute, and Linyanti, which combined is home to Africa’s largest
+                    elephant population.</p>
+
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <p>There is a rich variety of landscapes in addition to the famed riverfront including vast floodplains,
+                    woodlands,
+                    grasslands, and clay pans which can be enjoyed by boating safaris and game drives.</p>
+            </div>
+
+            
+
+        </div>
+
+
+
+        <div class="page-image" id="chobegamelodge">
+            <img src="images/gamelodge.jpeg"
+                alt="">
+            <div class="page-image-overlay">
+                <div>
+                    <i><span class="subheading">-</span> Day 7 - 10</i>
+                    <h1>CHOBE GAME LODGE</h1>
+                </div>
+
+                <div class="page-image-location">
+                    <img src="images/icons/marker.svg" alt="marker">
+                    <h3>Chobe, Botswana</h3>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="page-content" >
+            <div class="page-title">
+                <h2>Chobe Game Lodge</h2>
+                <hr>
+
+            </div>
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Property Overview</i>
+                </div>
+
+                <p>The only permanent game lodge situated within the famous Chobe National Park, Chobe Game Lodge is
+                    Botswana’s premier
+                    venue for guests looking for a perfect base from which to explore the National Park and the Chobe
+                    River. This five-star
+                    Lodge has full eco-grading by the Botswana Tourism Board.</p>
+
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+                        src="https://player.vimeo.com/video/255352931?h=9d590bbb3f"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+
+
+                <p>Chobe Game Lodge is designed as a haven of peace and privacy – where relaxation is effortless and you
+                    can enjoy your own
+                    space. With six comfortably furnished viewing decks, a riverside boma, two bars, six different
+                    lounges and four dining
+                    locations, a comfy chair or lounger is never far away, each with a different perspective on the
+                    wilderness that
+                    surrounds the lodge. A large swimming pool provides welcome relief during hot afternoons and there
+                    is always a waiter on
+                    hand to bring you refreshments from the bar.</p>
+
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Experience & Activities</i>
+                </div>
+
+
+                <p>Chobe Game Lodge offers a choice of land or water-based activities and the most complete game
+                    experience in the Chobe
+                    National Park. Early-morning and late-afternoon game drives are conducted by expert guides in
+                    open-sided 4×4 vehicles to
+                    ensure maximum visibility of Chobe National Park’s spectacular scenery and abundant wildlife.
+                    Meanwhile, riverside game
+                    viewing may be done from small and highly manoeuvrable boats, perfect for morning or sunset cruises.
+                </p>
+
+                <div class="grid-2x">
+                    <img src="images/water2.jpeg"
+                        alt="">
+                    <img src="images/elephant2.jpeg"
+                        alt="">
+                </div>
+
+                <p>Chobe’s diverse wildlife roams in abundance – it is, for instance, home to the largest concentration
+                    of elephant in
+                    Africa. During the dry season these large herds, as well as vast herds of buffalo, congregate on the
+                    fertile flood
+                    plains along the Chobe River to drink, bathe and play. There are frequent sightings of lion, African
+                    wild dog, puku, red
+                    lechwe, sable, giraffe and roan antelope.</p>
+
+                <p>Guests wishing to pamper themselves are welcome to book one of the delightful treatments from the
+                    in-house beautician
+                    (for which there is an extra charge) or hit the gym for some exercise between the usual lodge
+                    activities
+                    (complimentary).</p>
+            </div>
+
+
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Accommodations</i>
+                </div>
+
+                <p><b>Family Room</b></p>
+
+
+                <p>Chobe Game Lodge can accommodate up to ninety-four people in total luxury. Each of the forty-four
+                    rooms at the lodge is
+                    river-facing and air-conditioned, featuring overhead fans, complimentary mini bar, en-suite
+                    bathrooms and a private
+                    terrace. For those guests who demand the ultimate in exclusivity, the Lodge has four river-view
+                    suites, each with its
+                    own plunge pool and separate lounge area.</p>
+
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide"><img
+                                src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt=""></div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
+            </div>
+
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Fast Facts</i>
+                </div>
+
+                <div class="page-text-facts">
+
+                    <img src="images/icons/case.png" alt="case">
+                    <div>
+                        <p><b>Rooms</b></p>
+                        <p>44 Rooms in total, accommodating a total of 94 guests: 23 Standard Rooms | 12 Interleading
+                            Rooms | 4 Triple Rooms | One
+                            Family Room | 3 Family Suites | One Honeymoon Suite</p>
+                    </div>
+
+                    <img src="images/icons/compass.png" alt="compass">
+                    <div>
+                        <p><b>Safari Activities</b></p>
+                        <p>Chobe river safaris
+                        </p>
+                        <p>Game drives</p>
+                        <p>Eco tours</p>
+                        <p>Cultural excursions</p>
+                    </div>
+
+                    <img src="images/icons/tent.png" alt="tent">
+                    <div>
+                        <p><b>Quick facts</b></p>
+                        <p>All rooms are river facing</p>
+                        <p>En-suite bathrooms with showers and bath, hand basin and toilet facilities</p>
+                        <p>All rooms are air-conditioned and have ceiling fans</p>
+                        <p>Accepts children of all ages</p>
+                        <p>Various indoor and outdoor dining locations</p>
+                        <p>Swimming pool</p>
+                        <p>Tshwene Lounge and Cigar Bar with a Library, Billiard table and TV and Linyanti Cocktail Bar
+                        </p>
+                        <p>Daily, inclusive laundry service available</p>
+                        <p>A small hairdryer is available in each room</p>
+                        <p>Electricity available 24/7 (220V)</p>
+                        <p>Wi-Fi available throughout</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="page-image" id="safaricosts">
+            <img src="images/green.jpeg"
+                alt="">
+            <div class="page-image-overlay">
+                <div>
+                    <i><span class="subheading">-</span> Safari Details</i>
+                    <h1>SAFARI COSTS</h1>
+                </div>
+
+            </div>
+        </div>
+        <div class="page-content" >
+            <div class="page-title">
+                <h2>Safari Costs</h2>
+                <hr>
+
+            </div>
+            <div class="page-text">
+
+                <ul>
+                    <li>
+                        <p><b>This cost includes:</b></p>
+                    </li>
+                    <li>
+                        <p>Full board accommodation</p>
+                    </li>
+                    <li>
+                        <p>All meals and drinks</p>
+                    </li>
+                    <li>
+                        <p>Safari Activities</p>
+                    </li>
+                    <li>
+                        <p>National Park and conservation fees</p>
+                    </li>
+                    <li>
+                        <p>Shared charter flights</p>
+                    </li>
+                    <li>
+                        <p>Laundry</p>
+                    </li>
+                    <li>
+                        <p>Emergency Medical evacuation</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p><b>This cost does not include:</b></p>
+                    </li>
+                    <li>
+                        <p>Gratuities</p>
+                    </li>
+                    <li>
+                        <p>International flights</p>
+                    </li>
+                    <li>
+                        <p>Spa treatments</p>
+                    </li>
+                    <li>
+                        <p>Premium Alcohol and champagne</p>
+                    </li>
+                    <li>
+                        <p>Travel insurance</p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+
+
+        <div class="page-image" id="aboutmavrossafaris">
+            <img src="images/people.jpeg"
+                alt="">
+            <div class="page-image-overlay">
+                <div>
+                    <i><span class="subheading">-</span> A Family Affair</i>
+                    <h1>ABOUT MAVROS SAFARIS</h1>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="page-content" >
+            <div class="page-title">
+                <h2>The Art of African Adventure</h2>
+                <hr>
+
+            </div>
+
+            <div class="page-text">
+                <div class="page-title">
+                    <i>Inspired by you</i>
+                </div>
+
+
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="images/family2.jpeg"
+                                alt=""></div>
+                        <div class="swiper-slide"><img
+                                src="images/person2.jpeg"
+                                alt=""></div>
+                        <div class="swiper-slide"><img src="images/person.jpeg" alt=""></div>
+
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <p>A Mavros Safari is about tapping into what makes Africa tick and understanding that a safari is a
+                    journey of
+                    discovery
+                    and delight, and should never be rushed. A Mavros Safari provides a unique opportunity to experience
+                    Africa through
+                    the
+                    eyes of some of its most devoted custodians.</p>
+
+                <p>Our greatest pleasure is bringing your safari vision to life.</p>
+
+                <p>Thank you for the opportunity to welcome you home to Africa.</p>
+
+                <p>Sincerely yours,</p>
+
+                <img src="images/imagetext.jpeg" alt="">
+
+
+                <div class="page-content-documents">
+                    <p>PDF Documents</p>
+                    <div class="page-content-documents-files">
+                        <a href="documents/Mavros Safaris Terms and Conditions 2022.pdf" target="_blank">
+                            <p>Standard Terms And Conditions</p>
+                        </a>
+                        <div class="icons">
+                            <a href="/documents/Mavros Safaris Terms and Conditions 2022.pdf" class="tooltip download"
+                                download><span class="tooltiptext">Download the single file</span></a>
+                            <div onclick="openPreviewTos()" class="tooltip preview"><span class="tooltiptext">See the
+                                    file preview</span></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: false,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+
+    <script src="js/menu.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function (e) {
+                let windowTop = $(this).scrollTop();
+                // Loop through every navigation menu item
+                $('.menu-items a').each(function (event) {
+                    // Check for the current navigation item associated section
+                    // Check how far the associated section is from the top
+                    // If the associated section is as far as the user have scrolled, add 'active' class to the item.
+                    if (windowTop >= $($(this).attr('href')).offset().top - 100) {
+                        // Remove 'active' from previously highlighted menu items
+                        $('.menu-items .active').removeClass('active');
+
+
+                        // Highlight the current menu item by adding 'active' class
+                        $(this).addClass('active');
+                       
+                    }
+                });
+
+              
+
+                $('.menu-items-mobile a').each(function (event) {
+                    // Check for the current navigation item associated section
+                    // Check how far the associated section is from the top
+                    // If the associated section is as far as the user have scrolled, add 'active' class to the item.
+                    if (windowTop >= $($(this).attr('href')).offset().top - 115) {
+                        // Remove 'active' from previously highlighted menu items
+                        $('.menu-items-mobile .mobile-active').removeClass('mobile-active');
+
+                        // Highlight the current menu item by adding 'active' class
+                        $(this).addClass('mobile-active');
+
+                        // Get the active element
+                        var activeElement = $('.menu-items-mobile .mobile-active');
+
+                        // Get the parent element
+                        var parentElement = activeElement.parent();
+
+                        // Calculate the new scroll position
+                        var newScrollPosition = activeElement[0].offsetLeft - (parentElement.width() / 2) + (activeElement.width() / 2) - 20;
+
+                        // Scroll to the new position after a small delay
+
+                            parentElement.scrollLeft(newScrollPosition);
+                       
+                    }
+                });
+
+            });
+        });
+
+        /* $('#scroll-button').on('click', function () {
+                // Get the current scroll position
+                let currentScroll = $(window).scrollTop();
+                // Find the next div with the specific class
+                let nextDiv = $('.page-image').filter(function () {
+                    return $(this).offset().top > currentScroll;
+                }).first();
+                // Scroll to the next div
+                console.log(nextDiv)
+                $(window).scrollTop(nextDiv.offset().top);
+                // Update the scroll position
+                currentScroll = $(window).scrollTop();
+            }); */
+
+    </script>
+
+    <script>
+        var map = L.map('map').setView([-19.243107806586487, 25.18550486521771], 10);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 7,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+        var marker = L.marker([-20.243107806586487, 25.18550486521771]).addTo(map);   
+        marker.bindPopup("Day 1-4: Jack's Camp, Makgadikgadi Pans").openPopup();
+
+        var marker2 = L.marker([-19.09363831282719, 23.864346245417845]).addTo(map);  
+        marker2.bindPopup("Day 4-7: Khwai Leadwood, Khwai Community Area")
+
+        var marker3 = L.marker([-18.36086771897742, 24.702499871109225]).addTo(map);
+            marker3.bindPopup("Day 7-10: Chobe Game Lodge, Chobe")
+            
+
+    </script>
+</body>
+
+</html>
