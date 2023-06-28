@@ -691,11 +691,11 @@ position: fixed;
     }
 
     .page-title{
-        top: 112px
+        top: 110px
     }
 
     .page-text .page-title{
-        top: 158px;
+        top: 156px;
     }
 
         .page-image-location h3{
@@ -721,7 +721,40 @@ position: fixed;
             display: block;
         }
 
+                .page-image-overlay:after {
+                    bottom: 5px;
+                    z-index: 0;
+                    height: 30%;
+                    background: linear-gradient(180deg, #3e3e40 -18.14%, hsla(0, 0%, 76.9%, 0) 95.4%);
+                    -webkit-transform: rotate(-180deg);
+                    transform: rotate(-180deg);
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    mix-blend-mode: multiply;
+        
+                }
+
     
+}
+
+@media screen and (max-width:420px){
+    .page-image-overlay h1{
+        font-size: 20px;
+    }
+
+        .page-image-location h3{
+            font-size: 10px;
+        }
+
+                .page-image-overlay{
+                    padding: 15px;
+                }
+
+                .page-content{
+                    padding: 15px;
+                }
 }
 
 .tooltip {
