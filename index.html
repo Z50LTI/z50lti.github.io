@@ -19,39 +19,42 @@
 <body>
     <div class="landing">
         <header>
-            <div class="x" onclick="toggle()">
+            <div class="header-item desktop" onclick="toggle()">
                 <img id="menu-button" src="images/icons/menu.svg" alt="">
             </div>
 
-            <img id="logo" class="x" src="images/image.png" alt="">
+            <div class="header-item mobile" onclick="toggleMobile()">
+                <img id="menu-button2" src="images/icons/menu.svg" alt="">
+            </div>
 
-            <div class="icons x">
+            <img id="logo" class="header-item" src="images/image.png" alt="">
+
+            <div class="icons header-item">
                 <div onclick="share()" class="tooltip share">
                     <span class="tooltiptext">Copy Link</span>
                 </div>
 
                 <a href="documents/Botswana Family Safari.pdf" download="">
                     <div class="tooltip pdf">
-                    <span class="tooltiptext">Download as PDF</span>
-                </div></a>
-                
+                        <span class="tooltiptext">Download as PDF</span>
+                    </div>
+                </a>
 
                 <div onclick="openContact()" class="tooltip phone">
                     <span class="tooltiptext">Contact Travel Consultant</span>
                 </div>
-
             </div>
         </header>
 
 
-        <div class="menu" id="menu">
+        <div class="menu desktopmenu" id="menu">
             <div onclick="toggle()">
                 <img src="images/icons/close.svg" alt="">
             </div>
             <h2>TABLE OF CONTENTS</h2>
 
-            <nav class="menu-items">
-                <a class="active" href="#coverpage">COVER PAGE</a>
+            <nav class="menu-items" id="menu-desktop">
+                <a class="active" href="#coverpage1">COVER PAGE</a>
                 <a href="#safarioverview">SAFARI OVERVIEW</a>
                 <a href="#safarimap">SAFARI MAP</a>
                 <a href="#makgadikgadipans">MAKGADIKGADI PANS <br> <i>Day 1 - 4</i></a>
@@ -68,22 +71,43 @@
 
         <div class="menu-mobile" id="menu-mobile">
 
-
             <nav class="menu-items-mobile">
-                <a class="mobile-active" href="#coverpage">COVER PAGE</a>
-                <a href="#safarioverview">SAFARI OVERVIEW</a>
-                <a href="#safarimap">SAFARI MAP</a>
-                <a href="#makgadikgadipans">MAKGADIKGADI PANS</a>
-                <a href="#jackscamp">JACK'S CAMP</a>
-                <a href="#khwaicommunityarea">KHWAI COMMUNITY AREA</a>
-                <a href="#khwaileadwood">KHWAI LEADWOOD</a>
-                <a href="#chobe">CHOBE </a>
-                <a href="#chobegamelodge">CHOBE GAME LODGE </a>
-                <a href="#safaricosts">SAFARI COSTS</a>
-                <a href="#aboutmavrossafaris">ABOUT MAVROS SAFARIS</a>
+                <a class="mobile-active" href="#coverpage_m">COVER PAGE</a>
+                <a href="#safarioverview_m">SAFARI OVERVIEW</a>
+                <a href="#safarimap_m">SAFARI MAP</a>
+                <a href="#makgadikgadipans_m">MAKGADIKGADI PANS</a>
+                <a href="#jackscamp_m">JACK'S CAMP</a>
+                <a href="#khwaicommunityarea_m">KHWAI COMMUNITY AREA</a>
+                <a href="#khwaileadwood_m">KHWAI LEADWOOD</a>
+                <a href="#chobe_m">CHOBE </a>
+                <a href="#chobegamelodge_m">CHOBE GAME LODGE </a>
+                <a href="#safaricosts_m">SAFARI COSTS</a>
+                <a href="#aboutmavrossafaris_m">ABOUT MAVROS SAFARIS</a>
             </nav>
-
         </div>
+
+        <div class="menu" id="menu-mobile2">
+            <div onclick="toggleMobile()">
+                <img src="images/icons/close.svg" alt="">
+            </div>
+            <h2>TABLE OF CONTENTS</h2>
+        
+            <nav class="menu-items">
+                <a class="active" href="#coverpage_m">COVER PAGE</a>
+                <a href="#safarioverview_m">SAFARI OVERVIEW</a>
+                <a href="#safarimap_m">SAFARI MAP</a>
+                <a href="#makgadikgadipans_m">MAKGADIKGADI PANS <br> <i>Day 1 - 4</i></a>
+                <a href="#jackscamp_m">JACK'S CAMP <br> <i>Day 1 - 4</i></a>
+                <a href="#khwaicommunityarea_m">KHWAI COMMUNITY AREA <br> <i>Day 4 - 7</i></a>
+                <a href="#khwaileadwood_m">KHWAI LEADWOOD <br> <i>Day 4 - 7</i></a>
+                <a href="#chobe_m">CHOBE <br> <i>Day 7 - 10</i></a>
+                <a href="#chobegamelodge_m">CHOBE GAME LODGE <br> <i>Day 7 - 10</i></a>
+                <a href="#safaricosts_m">SAFARI COSTS</a>
+                <a href="#aboutmavrossafaris_m">ABOUT MAVROS SAFARIS</a>
+            </nav>
+        
+        </div>
+        
 
 
         <div class="overlay-container" id="contact">
@@ -130,8 +154,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
 
@@ -167,25 +189,31 @@
             </div>
         </div>
 
-        <a class="arrow arrow-right" id="scroll-button">
+        <div id="copied">
+            The link has been copied to your clipboard.
+        </div>
+
+        <a href="#coverpage" class="arrow arrow-right" id="scroll-button">
             &#8595;
         </a>
-
-
 
         <!-- Cover Page -->
 
         <div class="page-image" id="coverpage">
-            <img src="images/family.jpeg" alt="">
-
-            <div class="page-image-overlay">
-                <div>
-                    <h1>Family Safari</h1>
-                </div>
+            <div class="page-sticky" id="coverpage_m">
+                <img src="images/family.jpeg" alt="">
                 
+                <div class="page-image-overlay">
+                    <div>
+                        <h1>Family Safari</h1>
+                    </div>
+                
+                </div>
             </div>
+            
         </div>
         <div class="page-content" id="coverpage1">
+            
             <h2>SAFARI IS THE SWAHILI WORD <br> FOR JOURNEY.</h2>
             <i>Yours starts here.</i>
             <a href="#safarioverview" class="arrow">
@@ -194,20 +222,23 @@
         </div>
 
 
-        <div class="page-image" id="safarioverview">
-            <img src="images/safari.jpeg" alt="">
-            <div class="page-image-overlay">
-                <div>
-                    <i><span class="subheading">-</span> Detailed itinerary</i>
-                    <h1>Safari Overview</h1>
+        <div class="page-image" id="safarioverview_m">
+            <div class="page-sticky">
+                <img src="images/safari.jpeg" alt="">
+                <div class="page-image-overlay">
+                    <div>
+                        <i><span class="subheading">-</span> Detailed itinerary</i>
+                        <h1>Safari Overview</h1>
+                    </div>
+                
                 </div>
-
             </div>
+            
         </div>
-        <div class="page-content text-centered">
+        <div class="page-content text-centered" id="safarioverview">
             <div class="page-title">
                 <h2>Safari Overview</h2>
-                
+
             </div>
             <div class="page-text">
                 <div class="page-title">
@@ -222,20 +253,23 @@
         </div>
 
 
-        <div class="page-image" id="safarimap">
-            <img src="images/man.jpeg" alt="">
-            <div class="page-image-overlay">
-                <div>
-                    <i><span class="subheading">-</span> Detailed itinerary</i>
-                    <h1>SAFARI MAP</h1>
+        <div class="page-image" id="safarimap_m">
+            <div class="page-sticky">
+                <img src="images/man.jpeg" alt="">
+                <div class="page-image-overlay">
+                    <div>
+                        <i><span class="subheading">-</span> Detailed itinerary</i>
+                        <h1>SAFARI MAP</h1>
+                    </div>
+                
                 </div>
-
             </div>
+            
         </div>
-        <div class="page-content text-centered">
+        <div class="page-content text-centered" id="safarimap">
             <div class="page-title">
                 <h2>Safari Overview</h2>
-                
+
             </div>
             <div class="page-text">
                 <div class="page-title">
@@ -256,29 +290,30 @@
 
         </div>
 
-
-
         <!-- Safari overview -->
 
-        <div class="page-image" id="makgadikgadipans">
-            <img src="images/image_processing20211013-10-1u45byd.jpeg" alt="">
-            <div class="page-image-overlay">
-                <div>
-                    <i><span class="subheading">-</span> Day 1 - 4</i>
-                    <h1>MAKGADIKGADI PANS</h1>
+        <div class="page-image" id="makgadikgadipans_m">
+            <div class="page-sticky">
+                <img src="images/image_processing20211013-10-1u45byd.jpeg" alt="">
+                <div class="page-image-overlay">
+                    <div>
+                        <i><span class="subheading">-</span> Day 1 - 4</i>
+                        <h1>MAKGADIKGADI PANS</h1>
+                    </div>
+                
+                    <div class="page-image-location">
+                        <img src="images/icons/marker.svg" alt="marker">
+                        <h3>Makgadikgadi Pans, Botswana</h3>
+                    </div>
+                
                 </div>
-
-                <div class="page-image-location">
-                    <img src="images/icons/marker.svg" alt="marker">
-                    <h3>Makgadikgadi Pans, Botswana</h3>
-                </div>
-
             </div>
+           
         </div>
-        <div class="page-content">
+        <div class="page-content" id="makgadikgadipans">
             <div class="page-title">
                 <h2>Makgadikgadi Pans</h2>
-                
+
 
             </div>
             <div class="page-text">
@@ -333,26 +368,29 @@
         </div>
 
 
-        <div class="page-image" id="jackscamp">
-            <img src="images/campsmall.jpeg" alt="">
-            <div class="page-image-overlay">
-                <div>
-                    <i><span class="subheading">-</span> Day 1 - 4</i>
-                    <h1>JACK'S CAMP</h1>
+        <div class="page-image" id="jackscamp_m">
+            <div class="page-sticky">
+                <img src="images/campsmall.jpeg" alt="">
+                <div class="page-image-overlay">
+                    <div>
+                        <i><span class="subheading">-</span> Day 1 - 4</i>
+                        <h1>JACK'S CAMP</h1>
+                    </div>
+                
+                    <div class="page-image-location">
+                        <img src="images/icons/marker.svg" alt="marker">
+                        <h3>Makgadikgadi Pans, Botswana</h3>
+                    </div>
+                
+                
                 </div>
-
-                <div class="page-image-location">
-                    <img src="images/icons/marker.svg" alt="marker">
-                    <h3>Makgadikgadi Pans, Botswana</h3>
-                </div>
-
-
             </div>
+            
         </div>
-        <div class="page-content">
+        <div class="page-content" id="jackscamp">
             <div class="page-title">
                 <h2>Jack's Camp</h2>
-                
+
 
             </div>
             <div class="page-text">
@@ -499,29 +537,31 @@
         </div>
 
 
-
-        <div class="page-image" id="khwaicommunityarea">
-            <img src="images/animal.jpeg" alt="">
-            <div class="page-image-overlay">
-                <div>
-                    <i><span class="subheading">-</span> Day 4 - 7</i>
-                    <h1>KHWAI COMMUNITY AREA</h1>
+        <div class="page-image" id="khwaicommunityarea_m">
+            <div class="page-sticky">
+                <img src="images/animal.jpeg" alt="">
+                <div class="page-image-overlay">
+                    <div>
+                        <i><span class="subheading">-</span> Day 4 - 7</i>
+                        <h1>KHWAI COMMUNITY AREA</h1>
+                    </div>
+                
+                
+                
+                    <div class="page-image-location">
+                        <img src="images/icons/marker.svg" alt="marker">
+                        <h3>Khwai Community Area, Botswana</h3>
+                    </div>
+                
                 </div>
-
-
-
-                <div class="page-image-location">
-                    <img src="images/icons/marker.svg" alt="marker">
-                    <h3>Khwai Community Area, Botswana</h3>
-                </div>
-
             </div>
+            
         </div>
 
-        <div class="page-content">
+        <div class="page-content" id="khwaicommunityarea">
             <div class="page-title">
                 <h2>Khwai Community Area</h2>
-                
+
 
             </div>
             <div class="page-text">
@@ -586,28 +626,28 @@
         </div>
 
 
-
-        <div class="page-image" id="khwaileadwood">
-            <img src="images/green.jpeg" alt="">
-            <div class="page-image-overlay">
-                <div>
-                    <i><span class="subheading">-</span> Day 4 - 7</i>
-                    <h1>Khwai Leadwood</h1>
+        <div class="page-image" id="khwaileadwood_m">
+            <div class="page-sticky">
+                <img src="images/green.jpeg" alt="">
+                <div class="page-image-overlay">
+                    <div>
+                        <i><span class="subheading">-</span> Day 4 - 7</i>
+                        <h1>Khwai Leadwood</h1>
+                    </div>
+                
+                    <div class="page-image-location">
+                        <img src="images/icons/marker.svg" alt="marker">
+                        <h3>Khwai Community Area, Botswana</h3>
+                    </div>
                 </div>
-
-                <div class="page-image-location">
-                    <img src="images/icons/marker.svg" alt="marker">
-                    <h3>Khwai Community Area, Botswana</h3>
-                </div>
-
-
             </div>
+            
         </div>
 
-        <div class="page-content">
+        <div class="page-content" id="khwaileadwood">
             <div class="page-title">
                 <h2>Khwai Leadwood</h2>
-                
+
 
             </div>
             <div class="page-text">
@@ -811,27 +851,28 @@
         </div>
 
 
-
-
-        <div class="page-image" id="chobe">
-            <img src="images/elephant.jpeg" alt="">
-            <div class="page-image-overlay">
-                <div>
-                    <i><span class="subheading">-</span> Day 7 - 10</i>
-                    <h1>CHOBE</h1>
+        <div class="page-image" id="chobe_m">
+            <div class="page-sticky">
+                <img src="images/elephant.jpeg" alt="">
+                <div class="page-image-overlay">
+                    <div>
+                        <i><span class="subheading">-</span> Day 7 - 10</i>
+                        <h1>CHOBE</h1>
+                    </div>
+                
+                    <div class="page-image-location">
+                        <img src="images/icons/marker.svg" alt="marker">
+                        <h3>Chobe, Botswana</h3>
+                    </div>
+                
                 </div>
-
-                <div class="page-image-location">
-                    <img src="images/icons/marker.svg" alt="marker">
-                    <h3>Chobe, Botswana</h3>
-                </div>
-
             </div>
+            
         </div>
-        <div class="page-content">
+        <div class="page-content" id="chobe">
             <div class="page-title">
                 <h2>Chobe National Park</h2>
-                
+
 
             </div>
             <div class="page-text">
@@ -867,34 +908,30 @@
                     woodlands,
                     grasslands, and clay pans which can be enjoyed by boating safaris and game drives.</p>
             </div>
-
-
-
         </div>
 
-
-
-        <div class="page-image" id="chobegamelodge">
-            <img src="images/gamelodge.jpeg" alt="">
-            <div class="page-image-overlay">
-                <div>
-                    <i><span class="subheading">-</span> Day 7 - 10</i>
-                    <h1>CHOBE GAME LODGE</h1>
+        <div class="page-image" id="chobegamelodge_m">
+            <div class="page-sticky">
+                <img src="images/gamelodge.jpeg" alt="">
+                <div class="page-image-overlay">
+                    <div>
+                        <i><span class="subheading">-</span> Day 7 - 10</i>
+                        <h1>CHOBE GAME LODGE</h1>
+                    </div>
+                
+                    <div class="page-image-location">
+                        <img src="images/icons/marker.svg" alt="marker">
+                        <h3>Chobe, Botswana</h3>
+                    </div>
+                
                 </div>
-
-                <div class="page-image-location">
-                    <img src="images/icons/marker.svg" alt="marker">
-                    <h3>Chobe, Botswana</h3>
-                </div>
-
             </div>
+            
         </div>
 
-        <div class="page-content">
+        <div class="page-content" id="chobegamelodge">
             <div class="page-title">
                 <h2>Chobe Game Lodge</h2>
-                
-
             </div>
             <div class="page-text">
                 <div class="page-title">
@@ -938,13 +975,11 @@
                         <div class="swiper-slide"><img src="images/cg9.jpeg" alt=""></div>
                         <div class="swiper-slide"><img src="images/cg10.jpeg" alt=""></div>
                         <div class="swiper-slide"><img src="images/cg11.jpeg" alt=""></div>
-
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
                 </div>
-
             </div>
 
             <div class="page-text">
@@ -1063,21 +1098,22 @@
         </div>
 
 
-        <div class="page-image" id="safaricosts">
-            <img src="images/green.jpeg" alt="">
-            <div class="page-image-overlay">
-                <div>
-                    <i><span class="subheading">-</span> Safari Details</i>
-                    <h1>SAFARI COSTS</h1>
+        <div class="page-image" id="safaricosts_m">
+            <div class="page-sticky">
+                <img src="images/green.jpeg" alt="">
+                <div class="page-image-overlay">
+                    <div>
+                        <i><span class="subheading">-</span> Safari Details</i>
+                        <h1>SAFARI COSTS</h1>
+                    </div>
+                
                 </div>
-
             </div>
+            
         </div>
-        <div class="page-content">
+        <div class="page-content" id="safaricosts">
             <div class="page-title">
                 <h2>Safari Costs</h2>
-                
-
             </div>
             <div class="page-text">
 
@@ -1131,31 +1167,27 @@
             </div>
         </div>
 
-
-
-        <div class="page-image" id="aboutmavrossafaris">
-            <img src="images/people.jpeg" alt="">
-            <div class="page-image-overlay">
-                <div>
-                    <i><span class="subheading">-</span> A Family Affair</i>
-                    <h1>ABOUT MAVROS SAFARIS</h1>
+        <div class="page-image" id="aboutmavrossafaris_m">
+            <div class="page-sticky">
+                <img src="images/people.jpeg" alt="">
+                <div class="page-image-overlay">
+                    <div>
+                        <i><span class="subheading">-</span> A Family Affair</i>
+                        <h1>ABOUT MAVROS SAFARIS</h1>
+                    </div>
                 </div>
-
             </div>
         </div>
 
-        <div class="page-content">
+        <div class="page-content" id="aboutmavrossafaris">
             <div class="page-title">
                 <h2>The Art of African Adventure</h2>
-                
-
             </div>
 
             <div class="page-text">
                 <div class="page-title">
                     <i>Inspired by you</i>
                 </div>
-
 
                 <!-- Swiper -->
                 <div class="swiper mySwiper">
@@ -1201,93 +1233,22 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
 
         </div>
 
     </div>
 
 
-
-
-
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            loop: false,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
-
-
+    <script src="js/swiper.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/menu-items.js"></script>
 
     <script>
-        $(document).ready(function () {
-            $(window).scroll(function (e) {
-                let windowTop = $(this).scrollTop();
-                // Loop through every navigation menu item
-                $('.menu-items a').each(function (event) {
-                    // Check for the current navigation item associated section
-                    // Check how far the associated section is from the top
-                    // If the associated section is as far as the user have scrolled, add 'active' class to the item.
-                    if (windowTop >= $($(this).attr('href')).offset().top - 115) {
-                        // Remove 'active' from previously highlighted menu items
-                        $('.menu-items .active').removeClass('active');
-
-
-                        // Highlight the current menu item by adding 'active' class
-                        $(this).addClass('active');
-
-                    }
-                });
-
-
-
-                $('.menu-items-mobile a').each(function (event) {
-                    // Check for the current navigation item associated section
-                    // Check how far the associated section is from the top
-                    // If the associated section is as far as the user have scrolled, add 'active' class to the item.
-                    if (windowTop >= $($(this).attr('href')).offset().top - 115) {
-                        // Remove 'active' from previously highlighted menu items
-                        $('.menu-items-mobile .mobile-active').removeClass('mobile-active');
-
-                        // Highlight the current menu item by adding 'active' class
-                        $(this).addClass('mobile-active');
-
-                        // Get the active element
-                        var activeElement = $('.menu-items-mobile .mobile-active');
-
-                        // Get the parent element
-                        var parentElement = activeElement.parent();
-
-                        // Calculate the new scroll position
-                        var newScrollPosition = activeElement[0].offsetLeft - (parentElement.width() / 2) + (activeElement.width() / 2) - 20;
-
-                        // Scroll to the new position after a small delay
-
-                        parentElement.scrollLeft(newScrollPosition);
-
-                    }
-                });
-
-            });
-        });
+        
 
         /* $('#scroll-button').on('click', function () {
                 // Get the current scroll position
@@ -1305,24 +1266,7 @@
 
     </script>
 
-    <script>
-        var map = L.map('map').setView([-19.243107806586487, 25.18550486521771], 10);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 7,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
 
-        var marker = L.marker([-20.243107806586487, 25.18550486521771]).addTo(map);
-        marker.bindPopup("Day 1-4: Jack's Camp, Makgadikgadi Pans").openPopup();
-
-        var marker2 = L.marker([-19.09363831282719, 23.864346245417845]).addTo(map);
-        marker2.bindPopup("Day 4-7: Khwai Leadwood, Khwai Community Area")
-
-        var marker3 = L.marker([-18.36086771897742, 24.702499871109225]).addTo(map);
-        marker3.bindPopup("Day 7-10: Chobe Game Lodge, Chobe")
-
-
-    </script>
 </body>
 
 </html>
