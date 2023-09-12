@@ -1,0 +1,6 @@
+/* -----------------for pie------------------- */
+#content > ul > li, .b_part, .b2_part, .readMore1, .next1, .prev1, a.nav_item, .submenu_1, .submenu_2 {behavior: url(js/PIE.htc);}
+
+#form1 .message .empty {
+	bottom: -12px;
+}
