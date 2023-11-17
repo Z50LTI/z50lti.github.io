@@ -1,0 +1,11 @@
+.portfolio-banner{
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio-text{
+    text-align: center;
+    max-width: 1600px;
+    margin: 0 auto;
+}

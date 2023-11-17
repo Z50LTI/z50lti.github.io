@@ -1,0 +1,22 @@
+.container{
+  
+    margin: 0 auto;
+    padding: 50px;
+    color: white;
+}
+
+.container-overlay{
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.bg{
+    background-image: url('../../images/Drohnenfotos/DJI_0215.jpg');
+    background-position: center;
+    background-size: cover;
+
+}
