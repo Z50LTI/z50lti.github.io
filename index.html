@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css?version=7.2">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" >
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://player.vimeo.com/api/player.js"></script>
+   <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    
     <title>Rod Henriques</title>
 </head>
 
@@ -45,7 +45,6 @@
                 </div>
             </a>
         </div>
-
     </div>
 
     <div class="video-section">
@@ -165,8 +164,6 @@
             <div class="awards">
                 <img src="images/shots.png" alt="">
             </div>
-
-
         </div>
     </div>
 
@@ -240,7 +237,7 @@
     </div>
 
     <div class="video-section">
-        <iframe src="https://player.vimeo.com/video/827172852?&muted=1&background=1&autoplay=0" allowfullscreen
+        <iframe loading="lazy" src="https://player.vimeo.com/video/827172852?&muted=1&background=1&autoplay=0" allowfullscreen
             ></iframe>
         <div class="title">
             <a href="cathay.html">
@@ -254,7 +251,7 @@
     </div>
 
     <div class="video-section">
-        <iframe src="https://player.vimeo.com/video/826916809?&muted=1&background=1&autoplay=0" allowfullscreen
+        <iframe loading="lazy" src="https://player.vimeo.com/video/826916809?&muted=1&background=1&autoplay=0" allowfullscreen
             ></iframe>
         <div class="title">
             <a href="opelsiri.html">
@@ -274,7 +271,7 @@
         </div>
     </div>
     <div class="video-section">
-        <iframe src="https://player.vimeo.com/video/826916096?&muted=1&background=1&autoplay=0" allowfullscreen
+        <iframe loading="lazy" src="https://player.vimeo.com/video/826916096?&muted=1&background=1&autoplay=0" allowfullscreen
             ></iframe>
         <div class="title">
             <a href="nivea-skin.html">
@@ -288,7 +285,7 @@
     </div>
 
     <div class="video-section">
-        <iframe src="https://player.vimeo.com/video/827166211?&muted=1&background=1&autoplay=0" allowfullscreen
+        <iframe loading="lazy" src="https://player.vimeo.com/video/827166211?&muted=1&background=1&autoplay=0" allowfullscreen
             ></iframe>
         <div class="title">
             <a href="bikesign.html">
@@ -308,7 +305,7 @@
     </div>
 
     <div class="video-section">
-        <iframe src="https://player.vimeo.com/video/826915914?&muted=1&background=1&autoplay=0" allowfullscreen
+        <iframe loading="lazy" src="https://player.vimeo.com/video/826915914?&muted=1&background=1&autoplay=0" allowfullscreen
             ></iframe>
         <div class="title">
             <a href="mastercard.html">
@@ -322,7 +319,7 @@
     </div>
 
     <div class="video-section">
-        <iframe src="https://player.vimeo.com/video/858970088?&muted=1&background=1&autoplay=0" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://player.vimeo.com/video/858970088?&muted=1&background=1&autoplay=0" allowfullscreen></iframe>
         <div class="title">
             <a href="audi.html">
                 <div>
@@ -335,7 +332,7 @@
     </div>
 
     <div class="video-section">
-        <iframe class="min-scaled" src="https://player.vimeo.com/video/826917077?&muted=1&background=1&autoplay=0" allowfullscreen
+        <iframe loading="lazy" class="min-scaled" src="https://player.vimeo.com/video/826917077?&muted=1&background=1&autoplay=0" allowfullscreen
             ></iframe>
         <div class="title">
             <a href="astrakids.html">
@@ -352,21 +349,8 @@
         </div>
     </div>
 
-   <!--  <div class="video-section">
-        <iframe class="min-scaled min-scaledx" src="https://player.vimeo.com/video/833673094?&muted=1&background=1&autoplay=0" allowfullscreen></iframe>
-        <div class="title">
-            <a href="lifeready.html">
-                <div>
-                    <p>Ford</p>
-                    <h2>Life Ready</h2>
-                </div>
-            </a>
-    
-        </div>
-    </div> -->
-
     <div class="video-section">
-        <iframe src="https://player.vimeo.com/video/826917412?&muted=1&background=1&autoplay=0" allowfullscreen
+        <iframe loading="lazy" src="https://player.vimeo.com/video/826917412?&muted=1&background=1&autoplay=0" allowfullscreen
             ></iframe>
         <div class="title">
             <a href="whiskas.html">
@@ -379,16 +363,15 @@
         </div>
     </div>
 
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
    <script>
 
-        window.addEventListener('DOMContentLoaded', (event) => {
+       window.addEventListener('DOMContentLoaded', (event) => {
                console.error = function () { };
-
 
             let vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-
 
             var iframes = document.querySelectorAll('iframe');
             var players = [];
@@ -417,13 +400,10 @@
             iframes.forEach(function (iframe) {
                 observer.observe(iframe);
             });
-            });
-        
-
+            }); 
+                  
 
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites/SmoothScroll.min.js"></script>
 
 </body>
 
