@@ -6,6 +6,7 @@ to the menu and store the state in localStorage */
 document.getElementById('openMenu').addEventListener('click', () => {
     menu.classList.add("opened")
     localStorage.setItem('menuState', 'open');
+    document.body.style.overflow = "hidden"
 })
 
 /* when the menu button is clicked, we remove the "opened" class 
@@ -14,6 +15,7 @@ from the menu and store the state in localStorage */
 document.getElementById('closeMenu').addEventListener('click', () => {
     menu.classList.remove("opened")
     localStorage.setItem('menuState', 'closed');
+    document.body.style.overflow = "auto"
 })
 
 var menulink = document.querySelectorAll(".menu-items a")
@@ -27,11 +29,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if (menuState === 'open') {
         menu.classList.add("opened")
         menu.classList.add("keepopened")
+        document.body.style.overflow = "hidden"
 
         setTimeout(function () {
             menu.classList.remove("opened")
             menu.classList.remove("keepopened")
             localStorage.setItem('menuState', 'closed');
+            document.body.style.overflow = "auto"
         }, 200);
     }
   });

@@ -105,12 +105,12 @@ footer {
     background-color: black;
     display: flex;
     flex-direction: column;
-    z-index: 4;
     align-items: flex-end;
     justify-content: center;
     text-align: start;
     opacity: 0;
     transition: 1s;
+    z-index: 4;
     pointer-events: none;
 }
 
@@ -238,7 +238,10 @@ footer {
     gap: 5px;
     flex-direction: row;
     align-items: center;
+  
 }
+
+
 
 
 /* Contact Page */
@@ -529,9 +532,16 @@ footer {
         display: none !important;
     }
 
-    * {
-        cursor: auto !important;
+    *{
+        cursor:auto
     }
+
+}
+
+    #home-works-btn *, .work-item-title h2, a{
+        cursor: pointer !important;
+    }
+
 
     .container,
     header,
