@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     user-select: none;
-    cursor: none;
+    cursor: none !important;
 }
 
 /* Font */
@@ -212,7 +212,7 @@ footer {
     position: fixed;
     left: -100px;
     box-shadow: 2px -3px 41px -1px rgba(250, 250, 250, 0.64);
-    /*     transition: all 0.1s linear; */
+    transition: 0.2s transform;
     pointer-events: none;
     display: none;
     z-index: 10;
@@ -533,14 +533,14 @@ footer {
     }
 
     *{
-        cursor:auto
+        cursor:auto !important
     }
 
-}
-
-    #home-works-btn *, .work-item-title h2, a{
+    #home-works-btn *, .work-item-title h2, a, .icon{
         cursor: pointer !important;
     }
+
+  
 
 
     .container,
