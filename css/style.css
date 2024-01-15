@@ -105,7 +105,7 @@ footer {
     background-color: black;
     display: flex;
     flex-direction: column;
-
+    z-index: 4;
     align-items: flex-end;
     justify-content: center;
     text-align: start;
