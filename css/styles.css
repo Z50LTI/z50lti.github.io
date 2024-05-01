@@ -63,8 +63,8 @@ main {
   opacity: 0;
 }
 main.landing {
-  height: calc(100svh - 93px);
-  min-height: 600px;
+  min-height: calc(100svh - 93px);
+  /* min-height: 600px; */
 }
 main.dark {
   position: relative;
@@ -193,6 +193,9 @@ header {
   top: 0;
   z-index: 10;
 }
+header img {
+  width: 140px;
+}
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -237,14 +240,24 @@ header nav a:hover, header nav a.active {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 25px;
   text-align: center;
+  overflow-x: hidden;
+  padding: 10px;
+  margin: 0 auto;
+  padding-top: 0;
 }
 .home img {
   width: 100%;
+  height: 60vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.home h2 {
+  white-space: nowrap;
 }
 .home .home-buttons {
   display: -webkit-box;
@@ -503,6 +516,7 @@ header nav a:hover, header nav a.active {
 .instruction .videos-grid .videos-grid-item h3 {
   margin: 10px 0;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 .instruction .videos-grid .videos-grid-item iframe {
   width: 100%;
@@ -531,6 +545,9 @@ footer .footer-content {
       -ms-flex-align: center;
           align-items: center;
   text-align: end;
+}
+footer .footer-content img {
+  max-width: 50px;
 }
 footer .footer-content h3 {
   margin-bottom: 5px;
@@ -645,6 +662,7 @@ footer .copyright {
         -ms-flex-pack: center;
             justify-content: center;
     gap: 20px;
+    opacity: 0;
     -webkit-transition: 0.2s;
     transition: 0.2s;
   }
@@ -653,6 +671,18 @@ footer .copyright {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .home {
+    gap: 15px;
+  }
+  .home h2 {
+    font-size: 5vw;
+  }
+  .home img {
+    height: 35vh;
+  }
+  .home .home-buttons {
+    gap: 15px;
   }
   .instruction .videos-grid {
     margin: 0;
@@ -709,6 +739,7 @@ footer .copyright {
   }
   .home .home-buttons {
     width: 100%;
+    max-width: 300px;
   }
   .button {
     min-width: auto;
@@ -747,6 +778,19 @@ footer .copyright {
   .faq .faq-item.active span,
   .faq .faq-item.active h3 {
     color: rgb(29, 103, 205);
+  }
+}
+@media only screen and (max-height: 620px) {
+  .home img {
+    height: 46vh;
+  }
+}
+@media only screen and (max-height: 440px) {
+  .home {
+    gap: 10px;
+  }
+  .home img {
+    height: 35vh;
   }
 }
 @media (hover: hover) and (pointer: fine) {

@@ -32,8 +32,8 @@ main {
   opacity: 0;
 
   &.landing {
-    height: calc(100svh - 93px);
-    min-height: 600px;
+    min-height: calc(100svh - 93px);
+    /* min-height: 600px; */
   }
 
   &.dark {
@@ -141,6 +141,10 @@ header {
   top: 0;
   z-index: 10;
 
+  img {
+    width: 140px;
+  }
+
   nav {
     display: flex;
     flex-direction: row;
@@ -174,12 +178,23 @@ header {
   flex-direction: column;
   align-items: center;
   height: 100%;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 25px;
   text-align: center;
+  overflow-x: hidden;
+
+  padding: 10px;
+  margin: 0 auto;
+  padding-top: 0;
 
   img {
     width: 100%;
+    height: 60vh;
+    object-fit: contain;
+  }
+
+  h2 {
+    white-space: nowrap;
   }
 
   .home-buttons {
@@ -399,6 +414,7 @@ header {
       h3 {
         margin: 10px 0;
         margin-bottom: 5px;
+        font-weight: bold;
       }
 
       iframe {
@@ -423,6 +439,10 @@ footer {
     justify-content: space-between;
     align-items: center;
     text-align: end;
+
+    img {
+      max-width: 50px;
+    }
 
     h3 {
       margin-bottom: 5px;

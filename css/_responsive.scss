@@ -91,6 +91,7 @@
       flex-direction: column;
       justify-content: center;
       gap: 20px;
+      opacity: 0;
       transition: 0.2s;
     }
   }
@@ -98,6 +99,22 @@
   .home {
     .home-buttons {
       flex-direction: column;
+    }
+  }
+
+  .home {
+    gap: 15px;
+
+    h2 {
+      font-size: 5vw;
+    }
+
+    img {
+      height: 35vh;
+    }
+
+    .home-buttons {
+      gap: 15px;
     }
   }
 
@@ -152,6 +169,7 @@
   .home {
     .home-buttons {
       width: 100%;
+      max-width: 300px;
     }
   }
 
@@ -198,6 +216,24 @@
           color: rgb(29, 103, 205);
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-height: 620px) {
+  .home {
+    img {
+      height: 46vh;
+    }
+  }
+}
+
+@media only screen and (max-height: 440px) {
+  .home {
+    gap: 10px;
+
+    img {
+      height: 35vh;
     }
   }
 }
