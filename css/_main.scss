@@ -155,6 +155,7 @@ header {
       color: white;
       text-decoration: none;
       transition: 0.3s;
+      text-transform: uppercase;
       &:hover,
       &.active {
         color: rgb(255, 77, 175);
