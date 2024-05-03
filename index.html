@@ -12,7 +12,7 @@
     <meta name="description" content="Spatio" />
     <meta name="keywords" content="keyword, keyword, keyword" />
 
-    <link rel="stylesheet" href="css/styles.css?v=3" />
+    <link rel="stylesheet" href="css/styles.css?v=4" />
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
   </head>
   <body>
@@ -43,6 +43,24 @@
           <a class="button" href="learnmore.html"> Learn More </a>
         </div>
       </div>
+
+      <div id="coupon">
+        <img src="assets/icons/close.svg" alt="" id="coupon-close" />
+        <h2>
+          Get 50% Off <br />
+          Your First Purchase!
+        </h2>
+        <p>Reveal the code and apply it at checkout.</p>
+
+        <div class="code">
+          <div id="reveal-code">
+            <p>Reveal Your Discount Code</p>
+          </div>
+          C1DOA3
+        </div>
+
+        <p id="no-thanks">No, thanks</p>
+      </div>
     </main>
 
     <footer>
@@ -57,6 +75,39 @@
 
       <div class="copyright">Copyright © 2024 Spatio All rights reserved.</div>
     </footer>
+
+    <!--     <div id="coupon-button">Coupon</div>
+ -->
+
+    <script>
+      document.getElementById("coupon-close").addEventListener("click", () => {
+        document.getElementById("coupon").style.display = "none";
+      });
+
+      document.getElementById("reveal-code").addEventListener("click", () => {
+        document.getElementById("reveal-code").style.display = "none";
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const coupon = document.getElementById("coupon");
+        const noThanks = coupon.querySelector("#no-thanks");
+
+        noThanks.addEventListener("click", () => {
+          document.cookie = "hideCoupon=true; max-age=604800";
+          coupon.style.display = "none";
+        });
+
+        if (
+          document.cookie
+            .split(";")
+            .some((item) => item.trim().startsWith("hideCoupon="))
+        ) {
+          coupon.style.display = "none";
+        }
+      });
+    </script>
 
     <script src="js/menu.js"></script>
   </body>
