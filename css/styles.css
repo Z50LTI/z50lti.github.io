@@ -1,11 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
 @font-face {
   font-family: Avenir;
   src: url(../fonts/avenir/avenir_roman_12.woff);
-}
+} */
 body {
-  font-family: "Exo 2", sans-serif;
-  font-family: Avenir;
+  /*  font-family: "Exo 2", sans-serif;
+  font-family: Avenir; */
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
   letter-spacing: 1.1px;
 }
@@ -255,15 +257,18 @@ header nav a:hover, header nav a.active {
   gap: 25px;
   text-align: center;
   overflow-x: hidden;
+  width: 100%;
   padding: 10px;
   margin: 0 auto;
   padding-top: 0;
 }
 .home img {
   width: 100%;
-  height: 60vh;
+  height: 55vh;
+  padding-bottom: 5vh;
   -o-object-fit: contain;
      object-fit: contain;
+  margin-bottom: auto;
 }
 .home h2 {
   white-space: nowrap;
@@ -277,6 +282,7 @@ header nav a:hover, header nav a.active {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 25px;
+  font-size: 1.2rem;
 }
 
 /* Learn more */
@@ -535,40 +541,10 @@ header nav a:hover, header nav a.active {
   color: rgb(255, 77, 175);
 }
 
-/* #coupon-button {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  height: 30px;
-  width: 120px;
-  background-color: rgb(255, 77, 175);
-  color: black;
-  padding: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  clip-path: polygon(
-    0 0,
-    0% 20%,
-    0 49%,
-    0 100%,
-    20% 100%,
-    55% 100%,
-    100% 100%,
-    100% 100%,
-    86% 51%,
-    100% 0,
-    100% 0,
-    46% 0
-  );
-} */
 #coupon {
   position: fixed;
-  /*   max-height: 50svh; */
-  /*   height: 100%; */
-  background-color: rgb(17, 17, 17);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   color: white;
   top: 50%;
   z-index: 100;
@@ -600,22 +576,8 @@ header nav a:hover, header nav a.active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /*   bottom: 0px;
-  right: 0;
-  left: auto;
-  transform: none;
-  width: auto;
-  height: auto;
-  gap: 10px; */
-}
-#coupon::before {
-  color: "d";
-  background-color: black;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
+  max-height: 100svh;
+  background-color: rgba(17, 17, 17, 0.85);
 }
 #coupon h2 {
   line-height: 1.2;
@@ -798,6 +760,16 @@ footer .copyright {
     width: 90%;
   }
 }
+@media only screen and (min-width: 769px) {
+  header nav {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    opacity: 1 !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+}
 @media only screen and (max-width: 768px) {
   #hamburger,
   #close {
@@ -807,6 +779,9 @@ footer .copyright {
     position: absolute;
     top: 30px;
     right: 20px;
+  }
+  main.landing {
+    min-height: calc(100svh - 64px);
   }
   header {
     padding: 10px 20px;
@@ -844,6 +819,8 @@ footer .copyright {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    max-width: 400px;
+    width: 100%;
   }
   .home {
     gap: 15px;
@@ -852,7 +829,8 @@ footer .copyright {
     font-size: 5vw;
   }
   .home img {
-    height: 35vh;
+    height: 30vh;
+    padding-bottom: 5vh;
   }
   .home .home-buttons {
     gap: 15px;
@@ -918,8 +896,8 @@ footer .copyright {
     font-size: 85%;
   }
   .home .home-buttons {
-    width: 100%;
-    max-width: 300px;
+    width: calc(100% - 20px);
+    /*      max-width: 300px; */
   }
   .button {
     min-width: auto;
@@ -962,7 +940,8 @@ footer .copyright {
 }
 @media only screen and (max-height: 620px) {
   .home img {
-    height: 46vh;
+    height: 40vh;
+    padding-bottom: 5vh;
   }
 }
 @media only screen and (max-height: 440px) {
@@ -970,7 +949,8 @@ footer .copyright {
     gap: 10px;
   }
   .home img {
-    height: 35vh;
+    height: 30vh;
+    padding-bottom: 5vh;
   }
 }
 @media (hover: hover) and (pointer: fine) {

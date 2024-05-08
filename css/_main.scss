@@ -187,15 +187,17 @@ header {
   gap: 25px;
   text-align: center;
   overflow-x: hidden;
-
+  width: 100%;
   padding: 10px;
   margin: 0 auto;
   padding-top: 0;
 
   img {
     width: 100%;
-    height: 60vh;
+    height: 55vh;
+    padding-bottom: 5vh;
     object-fit: contain;
+    margin-bottom: auto;
   }
 
   h2 {
@@ -206,6 +208,7 @@ header {
     display: flex;
     flex-direction: row;
     gap: 25px;
+    font-size: 1.2rem;
   }
 }
 
@@ -434,42 +437,10 @@ header {
   }
 }
 
-/* #coupon-button {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  height: 30px;
-  width: 120px;
-  background-color: rgb(255, 77, 175);
-  color: black;
-  padding: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  clip-path: polygon(
-    0 0,
-    0% 20%,
-    0 49%,
-    0 100%,
-    20% 100%,
-    55% 100%,
-    100% 100%,
-    100% 100%,
-    86% 51%,
-    100% 0,
-    100% 0,
-    46% 0
-  );
-} */
-
 #coupon {
   position: fixed;
-  /*   max-height: 50svh; */
-  /*   height: 100%; */
+  transform: translate3d(0, 0, 0);
 
-  background-color: rgb(17, 17, 17);
   color: white;
   top: 50%;
   z-index: 100;
@@ -484,30 +455,14 @@ header {
   opacity: 0;
   animation: fadein 0.5s forwards;
   animation-delay: 1s;
-
   display: flex;
   flex-direction: column;
   gap: 25px;
   align-items: center;
   justify-content: center;
+  max-height: 100svh;
 
-  /*   bottom: 0px;
-  right: 0;
-  left: auto;
-  transform: none;
-  width: auto;
-  height: auto;
-  gap: 10px; */
-
-  &::before {
-    color: "d";
-    background-color: black;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-  }
+  background-color: rgba(17, 17, 17, 0.85);
 
   h2 {
     line-height: 1.2;
