@@ -30,10 +30,13 @@ body {
 main {
   animation: fade 0.3s forwards;
   opacity: 0;
+  height: 100%;
 
   &.landing {
     min-height: calc(100svh - 93px);
     /* min-height: 600px; */
+    height: 100%;
+    flex-direction: column;
   }
 
   &.dark {
@@ -191,13 +194,19 @@ header {
   padding: 10px;
   margin: 0 auto;
   padding-top: 0;
+  justify-content: center;
+  flex: 1;
 
   img {
     width: 100%;
     height: 55vh;
+
+    height: 65vh;
+
     padding-bottom: 5vh;
+    margin-top: -5vh;
     object-fit: contain;
-    margin-bottom: auto;
+    /* margin-bottom: auto; */
   }
 
   h2 {

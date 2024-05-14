@@ -254,10 +254,19 @@
   }
 }
 
+@media only screen and (max-height: 720px) {
+  .home {
+    img {
+      height: 60vh;
+      padding-bottom: 5vh;
+    }
+  }
+}
+
 @media only screen and (max-height: 620px) {
   .home {
     img {
-      height: 40vh;
+      height: 45vh;
       padding-bottom: 5vh;
     }
   }
@@ -268,7 +277,7 @@
     gap: 10px;
 
     img {
-      height: 30vh;
+      height: 35vh;
       padding-bottom: 5vh;
     }
   }
