@@ -30,7 +30,8 @@ body {
 main {
   animation: fade 0.3s forwards;
   opacity: 0;
-  height: 100%;
+  min-height: 100%;
+  /* flex: 1; */
 
   &.landing {
     min-height: calc(100svh - 93px);
@@ -443,6 +444,237 @@ header {
 
   h2 {
     color: rgb(255, 77, 175);
+  }
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  max-width: 900px;
+  margin-bottom: 40px;
+
+  h2 {
+    color: rgb(255, 77, 175);
+    font-size: 2.2rem;
+  }
+
+  p {
+    max-width: 570px;
+  }
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 20px;
+  gap: 20px;
+  transform: scale(1.15);
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  max-width: 230px;
+  width: 100%;
+
+  .person-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+  }
+  .person-text {
+    background-color: #1e1c35d8;
+    color: #d4b9ef;
+    width: 85%;
+    margin-left: auto;
+    padding: 5px;
+    z-index: 2;
+    margin-right: -1px;
+    /*   z-index: 5; */
+    h4 {
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffa6d7;
+    text-transform: uppercase;
+    z-index: 2;
+    background-color: black;
+    padding: 5px;
+    width: calc(100% + 2px);
+    margin-left: -1px;
+    margin-bottom: -1px;
+    font-size: 0.9rem;
+  }
+
+  .child-text {
+    opacity: 0;
+    text-align: center;
+    background-color: black;
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+
+  .person-hover {
+    position: relative;
+  }
+
+  .person-child {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transition: 0.5s;
+    height: 100%;
+    img {
+      width: 100%;
+      /* aspect-ratio: 1 / 1; */
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      background-color: black;
+    }
+  }
+
+  &:hover {
+    .person-child,
+    .child-text {
+      opacity: 1;
+    }
+  }
+}
+
+.work {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 10%;
+
+  h2 {
+    color: rgb(255, 77, 175);
+    font-size: 2.2rem;
+  }
+
+  p {
+    max-width: 570px;
+  }
+
+  .work-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h3 {
+      color: rgb(255, 77, 175);
+    }
+  }
+}
+
+.album {
+  background-color: #e9e8eb;
+  border-radius: 17px;
+  padding: 15px;
+  max-width: 500px;
+  padding-bottom: 0;
+  width: 100%;
+
+  .album-cover {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .song {
+    padding: 15px 0;
+  }
+
+  /*  .song-link {
+    width: 60px !important;
+    padding: 10px !important;
+  } */
+}
+
+.song {
+  background-color: #e9e8eb;
+  padding: 15px;
+  border-radius: 17px;
+  max-width: 500px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10fr 2fr;
+  justify-items: center;
+  align-items: center;
+
+  .song-details {
+    display: flex;
+    flex-direction: column;
+    color: black !important;
+    gap: 5px;
+    width: 100%;
+    overflow: hidden;
+    img {
+      margin-top: 4px;
+      width: 65px;
+      filter: brightness(0) saturate(100%) invert(52%) sepia(7%) saturate(66%)
+        hue-rotate(202deg) brightness(97%) contrast(87%);
+    }
+  }
+
+  h3 {
+    color: black !important;
+    font-weight: 600;
+    float: left;
+    /* height: 35px;
+    line-height: 50px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    /* new css */
+    max-width: 90%;
+  }
+
+  p {
+    float: left;
+    /* height: 35px;
+    line-height: 50px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    /* new css */
+    max-width: 90%;
+  }
+
+  .song-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fb233c;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    /*  width: 80px;
+    padding: 22px; */
+    transition: 0.5s background;
+    width: 60px;
+    padding: 10px;
+
+    &:hover {
+      background-color: black;
+    }
   }
 }
 
