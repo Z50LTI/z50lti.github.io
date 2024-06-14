@@ -31,7 +31,7 @@ main {
   animation: fade 0.3s forwards;
   opacity: 0;
   min-height: 100%;
-  /* flex: 1; */
+  /*  flex: 1; */
 
   &.landing {
     min-height: calc(100svh - 93px);
@@ -447,6 +447,8 @@ header {
   }
 }
 
+/* Team */
+
 .team {
   display: flex;
   flex-direction: column;
@@ -467,10 +469,10 @@ header {
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
   margin-top: 20px;
   gap: 20px;
   transform: scale(1.15);
+  margin-bottom: 200px;
 }
 
 .person {
@@ -494,7 +496,7 @@ header {
     padding: 5px;
     z-index: 2;
     margin-right: -1px;
-    /*   z-index: 5; */
+
     h4 {
       font-weight: 600;
     }
@@ -540,7 +542,6 @@ header {
     height: 100%;
     img {
       width: 100%;
-      /* aspect-ratio: 1 / 1; */
       height: 100%;
       object-fit: cover;
       object-position: top;
@@ -555,6 +556,8 @@ header {
     }
   }
 }
+
+/* Our Work */
 
 .work {
   display: grid;
@@ -599,11 +602,6 @@ header {
   .song {
     padding: 15px 0;
   }
-
-  /*  .song-link {
-    width: 60px !important;
-    padding: 10px !important;
-  } */
 }
 
 .song {
@@ -636,25 +634,17 @@ header {
     color: black !important;
     font-weight: 600;
     float: left;
-    /* height: 35px;
-    line-height: 50px; */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-
-    /* new css */
     max-width: 90%;
   }
 
   p {
     float: left;
-    /* height: 35px;
-    line-height: 50px; */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-
-    /* new css */
     max-width: 90%;
   }
 
@@ -666,8 +656,6 @@ header {
     background-color: #fb233c;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    /*  width: 80px;
-    padding: 22px; */
     transition: 0.5s background;
     width: 60px;
     padding: 10px;
