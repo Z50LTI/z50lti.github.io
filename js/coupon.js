@@ -11,7 +11,7 @@ document.getElementById("reveal-code").addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", (event) => {
   noThanks.addEventListener("click", () => {
-    document.cookie = "hideCoupon=true; max-age=604800";
+    document.cookie = "hideCoupon=true; max-age=300";
     coupon.style.display = "none";
   });
 
