@@ -884,6 +884,10 @@ header nav a:hover, header nav a.active {
   text-decoration: underline;
   cursor: pointer;
 }
+#coupon #cost {
+  color: rgb(255, 77, 175);
+  font-size: 1.8rem;
+}
 
 @-webkit-keyframes fadein {
   0% {
@@ -902,6 +906,30 @@ header nav a:hover, header nav a.active {
     opacity: 1;
   }
 }
+.legal {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.legal h3 {
+  font-weight: bold;
+  margin: 0 !important;
+}
+.legal ul {
+  margin-left: 25px;
+}
+.legal .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1000px;
+  gap: 20px;
+}
+
 footer {
   padding: 40px;
   background-color: rgb(10, 10, 10);

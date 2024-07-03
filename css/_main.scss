@@ -743,6 +743,11 @@ header {
     text-decoration: underline;
     cursor: pointer;
   }
+
+  #cost {
+    color: rgb(255, 77, 175);
+    font-size: 1.8rem;
+  }
 }
 
 @keyframes fadein {
@@ -751,6 +756,26 @@ header {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.legal {
+  flex: 1;
+
+  h3 {
+    font-weight: bold;
+    margin: 0 !important;
+  }
+
+  ul {
+    margin-left: 25px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    gap: 20px;
   }
 }
 
