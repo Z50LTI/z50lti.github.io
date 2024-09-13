@@ -1,0 +1,312 @@
+body {
+  min-width: 360px;
+}
+
+@media (max-width: 1300px) {
+  .navbar {
+    padding: 15px;
+  }
+
+  .navbar ul {
+    flex: 1;
+    justify-content: space-evenly;
+    gap: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content-01,
+  .content-02,
+  .content-03,
+  .content-04,
+  .content-05,
+  .content-06 {
+    position: relative;
+    opacity: 1;
+    height: auto;
+    padding: 20px;
+  }
+
+  .faq-section {
+    padding: 20px;
+  }
+
+  .content-01 {
+    padding: 0;
+  }
+
+  .faq-section,
+  .pricing-wrapper,
+  .tools-section,
+  .ueber-uns-content {
+    margin: 0;
+  }
+
+  .details-container {
+    gap: 20px;
+  }
+
+  .service-wrapper {
+    width: 100%;
+    gap: 50px;
+  }
+
+  .services-header {
+    padding: 0;
+  }
+
+  .services-container {
+    order: 1;
+  }
+
+  .navbar {
+    padding: 15px;
+  }
+
+  .navbar ul {
+    display: none;
+    gap: 12px;
+    border-radius: 15px;
+  }
+
+  .navbar img {
+    height: 45px;
+  }
+
+  #burger {
+    display: block;
+  }
+
+  * {
+    scroll-margin-top: 100px;
+    scroll-behavior: smooth;
+  }
+
+  .scroll-indicator {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2em;
+  }
+
+  h2,
+  .pricing-header {
+    font-size: 1.8em !important;
+  }
+
+  .hero-image {
+    position: absolute;
+    right: -300px;
+    bottom: 0;
+    z-index: 1;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .hero-image {
+    height: 82%;
+    width: 600px;
+    max-width: none;
+  }
+  .hero-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    opacity: 0.9;
+    object-position: bottom;
+    transform: translateX(100%);
+    transition: opacity 1s ease, transform 1s ease;
+    animation: slideInRight 2s ease-in-out;
+  }
+
+  .hero-text {
+    width: 75%;
+  }
+
+  .hero-content {
+    margin: 0;
+    padding: 20px;
+    max-width: 100%;
+    padding-top: 120px;
+  }
+
+  .details-container,
+  .team-member-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .team-member-image img {
+    width: 80%;
+  }
+
+  .team-member-details {
+    padding: 0;
+    width: 100%;
+  }
+
+  .ueber-uns-content {
+    padding: 0;
+  }
+
+  .tools-section {
+    padding-bottom: 0;
+  }
+  .hero-image {
+    transition: 0.3s filter;
+  }
+
+  .tools-section {
+    padding: 0;
+  }
+
+  .pricing-wrapper,
+  .ueber-uns-section {
+    padding: 20px;
+    padding-top: 0;
+  }
+
+  .navbar ul.open {
+    gap: 0;
+    display: flex;
+  }
+
+  .navbar ul li a {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+  }
+
+  .service-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .services-container {
+    margin-top: 20px;
+  }
+}
+
+@media (max-height: 880px) {
+  * {
+    scroll-margin-top: 100px;
+    scroll-behavior: smooth;
+  }
+
+  .content-01,
+  .content-02,
+  .content-03,
+  .content-04,
+  .content-05,
+  .content-06 {
+    position: relative;
+    opacity: 1;
+    height: auto;
+    padding: 20px;
+  }
+
+  .faq-section {
+    padding: 20px;
+  }
+
+  .content-01 {
+    padding: 0;
+  }
+
+  .faq-section,
+  .pricing-wrapper,
+  .tools-section,
+  .ueber-uns-content {
+    margin: 0;
+  }
+
+  .details-container {
+    gap: 20px;
+  }
+
+  .service-wrapper {
+    width: 100%;
+    gap: 40px;
+  }
+
+  .services-header {
+    padding: 0;
+  }
+
+  .scroll-indicator {
+    display: none !important;
+  }
+
+  .navbar ul li a {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+  }
+
+  .navbar ul.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 74px;
+    right: 0;
+    width: 100%;
+
+    background-color: #101010;
+    padding: 20px;
+    z-index: 1000;
+    gap: 0;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+}
+
+@media (max-height: 820px) and (max-width: 768px) {
+  * {
+    scroll-margin-top: 100px;
+    scroll-behavior: smooth;
+  }
+
+  .navbar {
+    padding: 15px;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar img {
+    height: 45px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-image {
+    filter: brightness(0.6);
+  }
+
+  .plan-choice {
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0 5px;
+  }
+
+  p {
+    font-size: 1.1em !important;
+  }
+
+  h2 {
+    font-size: 1.5em !important;
+  }
+
+  h3 {
+    font-size: 1.3em !important;
+  }
+
+  .faq-card {
+    font-size: 14px;
+  }
+}

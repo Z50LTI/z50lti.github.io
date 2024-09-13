@@ -1,0 +1,157 @@
+.pricing-wrapper {
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 150px;
+  margin-bottom: -40px;
+}
+
+.pricing-header {
+  font-family: "Orbitron", sans-serif;
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    #9b6b2f,
+    #f8ec9b,
+    #c1a05c,
+    #c1a05c,
+    #ffffff
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.pricing-wrapper p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #b0b0b0;
+  max-width: 1200px; /* Begrenze die Breite des Absatzes */
+  margin-left: auto;
+  margin-right: auto;
+}
+.plan-switcher {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #00000049;
+  color: #ffffff;
+  border: 2px solid #000000;
+  max-width: 365px;
+  padding: 15px;
+  margin-left: 750px;
+
+  margin: 0 auto;
+  margin-top: -20px; /* Stellt sicher, dass die Buttons immer unten in der Box sind */
+}
+
+.plan-choice {
+  cursor: pointer;
+  font-size: 1.2em;
+  margin: 0 10px;
+}
+
+.is-active {
+  font-weight: bold;
+  color: #c1a05c;
+}
+
+.plan-separator {
+  margin: 0 10px;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.details-container {
+  display: flex;
+  justify-content: center; /* Zentriert die Boxen */
+  align-items: stretch; /* Stellt sicher, dass beide Boxen die gleiche Höhe haben */
+  gap: 75px; /* Abstand zwischen den Boxen */
+  flex-wrap: wrap; /* Bei Bedarf umbrechen */
+  max-width: 1100px;
+  margin: 0 auto; /* Zentriert den Container horizontal */
+  padding: 0 20px;
+}
+
+.plan-info,
+.consultation-section {
+  display: flex;
+  flex-direction: column; /* Stellt sicher, dass der Inhalt der Boxen vertikal gestapelt wird */
+  justify-content: space-between; /* Stellt sicher, dass der Inhalt der Boxen gleichmäßig verteilt ist */
+  flex: 1 1 30%;
+  padding: 20px;
+  background-color: #00000049;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #c1a05c;
+}
+
+/* Hover-Effekt für Plan-Karten */
+.plan-info:hover,
+.consultation-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+.plan-info h2,
+.consultation-section h2 {
+  background: linear-gradient(
+    90deg,
+    #9b6b2f,
+    #f8ec9b,
+    #c1a05c,
+    #c1a05c,
+    #ffffff
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.benefits-list {
+  margin-top: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.benefit-item,
+.consultation-item {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 2.5em;
+  margin: 20px 0;
+}
+
+.price-unit {
+  font-size: 0.5em;
+}
+
+.plan-savings {
+  font-size: 1em;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.start-button,
+.consultation-button {
+  background-color: #ffffff;
+  color: #0a0a0a;
+  box-shadow: 0 5px 15px rgba(193, 160, 92, 0.4);
+  margin-top: auto; /* Stellt sicher, dass die Buttons immer unten in der Box sind */
+}
+
+.start-button:hover,
+.consultation-button:hover {
+  background-color: #a3854b;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(193, 160, 92, 0.6);
+}

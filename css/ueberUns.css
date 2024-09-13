@@ -1,0 +1,129 @@
+.ueber-uns-content {
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 150px;
+  margin-bottom: -40px;
+}
+
+.ueber-uns-content h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    #9b6b2f,
+    #f8ec9b,
+    #c1a05c,
+    #c1a05c,
+    #ffffff
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.team-member-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #00000049;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 50px;
+  min-height: 500px;
+  max-width: 1500px;
+  /*   margin-left: 180px; */
+  border: 2px solid #c1a05c;
+
+  margin: 0 auto;
+}
+
+/* Adjusts the image to fit within the box while maintaining aspect ratio */
+.team-member-image {
+  flex: 1; /* Ensures the image takes up available space */
+  max-width: 400px; /* Sets a maximum width for the image container */
+}
+
+.team-member-image img {
+  width: 100%; /* Ensures the image fills the container */
+  height: auto; /* Maintains the image's aspect ratio */
+  border-radius: 15px; /* Matches the box border radius */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  padding-top: 10px;
+  z-index: 99999;
+}
+
+.team-member-details {
+  flex: 2;
+  padding-left: 30px;
+}
+
+.team-member-details h3 {
+  background: linear-gradient(
+    90deg,
+    #9b6b2f,
+    #f8ec9b,
+    #c1a05c,
+    #c1a05c,
+    #ffffff
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.team-member-details p {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Abstand zwischen dem Bild und dem Text */
+  background-color: #ffffff;
+  color: #000000 !important;
+  padding: 10px 10px; /* Weniger vertikales (2px) und horizontales Padding (7px) */
+  border-radius: 50px;
+  font-size: 12px; /* Kleinere Schriftgröße */
+  height: 42px; /* Festgelegte Höhe von ca. 22px */
+  width: 150px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(193, 160, 92, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: center;
+}
+
+.social-button:hover {
+  background-color: #a3854b;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(193, 160, 92, 0.6);
+}
+
+.social-icon {
+  width: 20px; /* Passe die Größe des Icons an, damit es zur Button-Höhe passt */
+  height: 20px;
+}
+
+.social-text {
+  margin-top: 17px;
+  color: #000000 !important; /* Textfarbe auf Schwarz gesetzt */
+}
+
+.team-member-arrow {
+  font-size: 2.5rem;
+  color: #ffffff;
+  cursor: pointer;
+}
